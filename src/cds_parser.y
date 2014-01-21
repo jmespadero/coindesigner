@@ -63,6 +63,7 @@ SoNormal *yyNormal;
 SoMaterial *yyMaterial;
 SoTextureCoordinate2 *yyTextureCoordinate2;
 SoMaterialBinding *yyMaterialBinding;
+bool yyMaterialBindingUsed;
 SoBlinker *yyBlinker;
 
 /* numero de puntos y de facetas */
@@ -109,7 +110,7 @@ extern int yy_ver_LF;
 %}
 
 %token _OFF _COFF _NOFF _NCOFF _STOFF _LIST _APPEARANCE _FILE
-%token _LF _MTLLIB _USEMTL _BEGIN _END
+%token _LF _MTLLIB _USEMTL _BEGIN _END _BIND _FACE
 %token _SOLID _ASCII _FACET _NORMAL _OUTER _LOOP _VERTEX 
 %token _ENDLOOP _ENDFACET _ENDSOLID
 
@@ -172,7 +173,15 @@ fich_geom:
      yyTextureCoordinate2 = new SoTextureCoordinate2;
      yyNormal = new SoNormal();
 
+     yyMaterialBinding=new SoMaterialBinding();
+     yyMaterialBinding->value=SoMaterialBinding::PER_VERTEX;
+     yyMaterialBindingUsed = false;
+     yyMaterial=new SoMaterial();
+     yyMaterial->diffuseColor.setNum(0);
+
      yyGeometry->addChild(yyCoordinate3);
+     yyGeometry->addChild(yyMaterialBinding);
+     yyGeometry->addChild(yyMaterial);
      yyGeometry->addChild(yyNormal);
      yyGeometry->addChild(yyTextureCoordinate2);
      yyGeometry->addChild(yyIndexedPointSet);
@@ -190,23 +199,25 @@ fich_geom:
   }
   bloque_SMF
   {
-     //Si el fichero no contenia coordenadas de textura, lo eliminamos
+     //Clean unused nodes in the scene tree
+     if (!yyMaterialBindingUsed)
+       yyGeometry->removeChild(yyMaterialBinding);
+
      if (yy_texture_coord->getNum() < 1)
        yyGeometry->removeChild(yyTextureCoordinate2);
 
-     //Si el fichero no contenia coordenadas de normal, lo eliminamos
      if (yyNormal->vector.getNum() < 1)
        yyGeometry->removeChild(yyNormal);
 
-     //Si el fichero no contenia puntos, lo eliminamos
+     if (yyMaterial->diffuseColor.getNum() < 1)
+         yyGeometry->removeChild(yyMaterial);
+
      if (yyIndexedPointSet->coordIndex.getNum() < 1)
        yyGeometry->removeChild(yyIndexedPointSet);
 
-     //Si el fichero no contenia lineas, lo eliminamos
      if (yyIndexedLineSet->coordIndex.getNum() < 1)
        yyGeometry->removeChild(yyIndexedLineSet);
 
-     //Si el fichero no contenia facetas, lo eliminamos
      if (yyIndexedFaceSet->coordIndex.getNum() < 1)
        yyGeometry->removeChild(yyIndexedFaceSet);
 
@@ -560,6 +571,24 @@ linea_SMF  : 'v' REAL REAL REAL
      yyIndexedFaceSet->coordIndex.set1Value(k++, -1);
      yyIndexedFaceSet->normalIndex.set1Value(k-1, -1);
      yyNumeroFacetas++;
+  }
+
+  | 'c' REAL REAL REAL
+  {
+      int idx = yyMaterial->diffuseColor.getNum();
+      yyMaterial->diffuseColor.set1Value(idx,$2, $3, $4);
+  }
+
+  | _BIND 'c' _VERTEX
+  {
+     yyMaterialBinding->value=SoMaterialBinding::PER_VERTEX;
+     yyMaterialBindingUsed = true;
+  }
+
+  | _BIND 'c' _FACE
+  {
+     yyMaterialBinding->value=SoMaterialBinding::PER_FACE;
+     yyMaterialBindingUsed = true;
   }
 
   | 'v' 't' REAL REAL

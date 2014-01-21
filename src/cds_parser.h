@@ -50,19 +50,21 @@
      _USEMTL = 268,
      _BEGIN = 269,
      _END = 270,
-     _SOLID = 271,
-     _ASCII = 272,
-     _FACET = 273,
-     _NORMAL = 274,
-     _OUTER = 275,
-     _LOOP = 276,
-     _VERTEX = 277,
-     _ENDLOOP = 278,
-     _ENDFACET = 279,
-     _ENDSOLID = 280,
-     _ENTERO = 281,
-     _REAL = 282,
-     _CADENA = 283
+     _BIND = 271,
+     _FACE = 272,
+     _SOLID = 273,
+     _ASCII = 274,
+     _FACET = 275,
+     _NORMAL = 276,
+     _OUTER = 277,
+     _LOOP = 278,
+     _VERTEX = 279,
+     _ENDLOOP = 280,
+     _ENDFACET = 281,
+     _ENDSOLID = 282,
+     _ENTERO = 283,
+     _REAL = 284,
+     _CADENA = 285
    };
 #endif
 /* Tokens.  */
@@ -79,19 +81,21 @@
 #define _USEMTL 268
 #define _BEGIN 269
 #define _END 270
-#define _SOLID 271
-#define _ASCII 272
-#define _FACET 273
-#define _NORMAL 274
-#define _OUTER 275
-#define _LOOP 276
-#define _VERTEX 277
-#define _ENDLOOP 278
-#define _ENDFACET 279
-#define _ENDSOLID 280
-#define _ENTERO 281
-#define _REAL 282
-#define _CADENA 283
+#define _BIND 271
+#define _FACE 272
+#define _SOLID 273
+#define _ASCII 274
+#define _FACET 275
+#define _NORMAL 276
+#define _OUTER 277
+#define _LOOP 278
+#define _VERTEX 279
+#define _ENDLOOP 280
+#define _ENDFACET 281
+#define _ENDSOLID 282
+#define _ENTERO 283
+#define _REAL 284
+#define _CADENA 285
 
 
 

@@ -66,6 +66,7 @@ MTLLIB		return _MTLLIB;
 USEMTL		return _USEMTL;
 BEGIN		return _BEGIN;
 END		return _END;
+bind            return _BIND;
 
 solid		return _SOLID;
 ascii		return _ASCII;
@@ -74,6 +75,7 @@ normal		return _NORMAL;
 outer		return _OUTER;
 loop		return _LOOP;
 vertex		return _VERTEX;
+face            return _FACE;
 endloop		return _ENDLOOP;
 endfacet	return _ENDFACET;
 endsolid	return _ENDSOLID;
