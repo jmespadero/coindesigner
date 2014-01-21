@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<!--(==============================================================)--><!--(Traduzido do Inglês por Jorge Barros de Abreu)==========--><!--(==============================================================)-->
+  <title>Criando o sistema planetário Terra-lua com coindesigner</title>
+<!--(Meta)==========================================================-->
+  <meta content="text/html; charset=windows-1252"
+ http-equiv="content-type">
+<!--(Body)==========================================================-->
+</head>
+<body>
+<h1>Criando o sistema planetário Terra-Lua com coindesigner</h1>
+<!--(Table)=========================================================-->
+<table x-use-null-cells="" style="width: 700px;" width="700">
+  <tbody>
+    <tr>
+      <td>
+      <ol>
+        <li class="kadov-p">Começaremos abrindo a aplicação e criando
+um <span style="font-weight: bold;">Separator</span> para o planeta
+Terra.<br>
+          <img src="tut01-01.jpg" border="0"></li>
+        <li class="kadov-p">Adicionaremos um nodo <span
+ style="font-weight: bold;">Texture2</span> e chamaremos o arquivo <span
+ style="font-weight: bold;">earth.jpg</span>. Nós então adicionaremos
+um nodo <span style="font-weight: bold;">Sphere</span> então podemos
+modelar o planeta Terra.<br>
+          <img src="tut01-02.jpg" border="0"></li>
+        <li class="kadov-p">Agora vamos fazer nosso planeta rotacionar.
+Para fazer isso adicionamos um&nbsp; nodo <span
+ style="font-weight: bold;">Rotor</span>, colocando esse nodo acima do
+nodo <span style="font-weight: bold;">Sphere</span>. Editaremos os
+valores de rotação como mostrado na figura para ratação em torno do
+eixo, ajustando&nbsp; a velocidade de rotação para 0.5.<br>
+          <img src="tut01-03.jpg" border="0"></li>
+        <li class="kadov-p">Terminamos a modelagem da Terra. Agora
+iremos modelar a lua, adicionando um novo nodo <span
+ style="font-weight: bold;">Separator</span>, com uma <span
+ style="font-weight: bold;">Sphere</span>, para o nodo ROOT como
+mostrado. Editaremos o raio da esfera de forma que ele seja menor que o
+da Terra, 0.2 por exemplo.<br>
+          <img src="tut01-04.jpg" border="0"></li>
+        <li class="kadov-p">Não podemos ver nova nova esfera? Sem
+problema. Ela ainda está dentro de nosso planeta Terra. Para colocá-la
+no lugar apropriado, adicionaremos um nodo&nbsp; <span
+ style="font-weight: bold;">Translation</span> , deslocando ela 10
+unidades sobre o eixo X. Agora clique sobe o ícone 'olho' (veja o passo
+7 para localizar o ícone, no lado direito da janela) para que a câmera
+se posicione de forma que seja possível ver toda a cena.<br>
+          <img src="tut01-05.jpg" border="0"></li>
+        <li class="kadov-p">Agora faremos com que a lua ande em torno
+da Terra. Para fazer isso, inseriremos um nodo <span
+ style="font-weight: bold;">Rotor</span> antes do nodo <span
+ style="font-weight: bold;">Translation</span> e ajustaremos a
+velocidade de rotação, como no passo 3. (Não precisamos inserir um nodo
+          <span style="font-weight: bold;">Rotor</span>&nbsp; para
+fazer a lua girar uma vez que ela sempre mostra&nbsp; mesma face para a
+Terra.)<br>
+          <img src="tut01-06.jpg" border="0"> </li>
+        <li class="kadov-p">Aqui está o resultado que teremos, com a
+Terra e a lua girando automaticamente.<br>
+          <img src="tut01-07.jpg" border="0"></li>
+      </ol>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

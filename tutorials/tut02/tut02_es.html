@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Cargando y manipulando ficheros externos</title>
+</head>
+<body>
+  <h1>Cargando y manipulando ficheros externos</h1>
+<table border="0" width="700">
+  <tbody>
+    <tr>
+      <td>
+En este tutorial revisaremos los siguientes aspectos:
+<ul>
+<li>Importaci&oacute;n de ficheros externos</li>
+<li>Uso de manips para transformar los modelos de la escena</li>
+<li>Uso de manips para controlar las luces de la escena</li>
+</ul>
+
+<ol>
+<li>
+Comenzamos seleccionando la opci&oacute;n <b>Importar geometria</b> del men&uacute; <b>Escena</b> y cargando el fichero cow.off
+    <br>
+    <img alt="" src="tut02_02.jpg" ><br>
+</li>
+<br>
+
+<li>
+Como podemos ver, coindesigner carga el contenido del fichero en un 
+nuevo SoSeparator.
+    <br>
+    <img alt="" src="tut02_03.jpg" ><br>
+</li>
+<br>
+
+<li>
+Los ficheros importados pueden modificarse igual que el resto de nodos
+de inventor. Por ejemplo, hemos a&ntilde;adido un nodo <b>SoTexture2</b>
+y aplicado la textura cow_skin.png a la geometr&iacute;a importada.
+    <br>
+    <img alt="" src="tut02_04.jpg" ><br>
+</li>
+<br>
+
+<li>
+Ahora seguimos el mismo m&eacute;todo para importar el fichero <b>bunny.xyz</b>.
+Podemos ver que este objeto es mucho mayor que la vaca, por lo que intentaremos reducir su tama&ntilde;o.
+    <br>
+    <img alt="" src="tut02_05.jpg" ><br>
+</li>
+<br>
+
+<li>
+Insertamos un <b>SoTabBoxManip</b> al comienzo del SoSeparator del segundo 
+fichero.
+    <br>
+    <img alt="" src="tut02_06.jpg" ><br>
+</li>
+<br>
+
+<li>
+Reducimos su tama&ntilde;o (con las esquinas del SoTabBoxManip),
+y colocamos el conejo en una nueva posici&oacute;n (con los laterales del
+SoTabBoxManip), hasta colocarlos en una posici&oacute;n adecuada.
+    <br>
+    <img alt="" src="tut02_07.jpg" ><br>
+</li>
+<br>
+
+<li>
+Ahora, pulsamos con el bot&oacute;n derecho del rat&oacute;n sobre
+SoTabBoxManip y escogemos la opci&oacute;n <b>Convertir en SoTransform</b>.
+    <br>
+    <img alt="" src="tut02_08.jpg" ><br>
+</li>
+<br>
+
+<li>
+Podemos ver como el manip desaparece, dejando aplicadas las transformaciones 
+que hemos hecho al conejo.
+    <br>
+    <img alt="" src="tut02_09.jpg" ><br>
+</li>
+<br>
+
+<li>
+Para iluminar la escena, a&ntilde;adimos un <b>SoDirectionalLightManip</b>
+al comienzo de la escena, y modificamos la direcci&oacute;n y color de la 
+luz a nuestro gusto.
+    <br>
+    <img alt="" src="tut02_10.jpg" ><br>
+</li>
+<br>
+
+<li>
+Podemos convertir el soDirectionalLightManip en un <b>SiDirectionalLight</b>
+usando el mismo m&eacute;todo que usamos anteriormente. Observemos que la luz
+roja incide &uacute;nicamente desde la parte superior de la escena.
+    <br>
+    <img alt="" src="tut02_11.jpg" ><br>
+</li>
+
+      </ol>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

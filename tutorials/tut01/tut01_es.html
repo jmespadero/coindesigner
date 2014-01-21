@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Creaci&oacute;n de un sistema planetario con coindesigner</title>
+</head>
+<body>
+<h1>Creaci&oacute;n de un sistema planetario con coindesigner</h1>
+<table border="0" width="700">
+  <tbody>
+    <tr>
+      <td>
+      <ol>
+        <li>Comenzamos arrancando la aplicaci&oacute;n y creando un
+Separator para el planeta Tierra.<br>
+          <img alt="" src="tut01-01.jpg"><br></li>
+        <li>A&ntilde;adimos un nodo Texture2 y cargamos el fichero
+earth.jpg.
+Despues, a&ntilde;adimos un nodo Sphere para modelar el planeta tierra.<br>
+          <img alt="" src="tut01-02.jpg"
+ ><br></li>
+        <li>Ahora vamos hacer girar nuestro planeta. Para ello,
+a&ntilde;adimos un nodo Rotor lo colocamos por encima del nodo Sphere.
+Luego editamos el valor de la rotaci&oacute;n para que sea alrededor
+del eje Y y ajustamos la velocidad de giro a 0.5<br>
+          <img alt="" src="tut01-03.jpg"
+ ><br></li>
+        <li>Ya hemos terminado de modelar la tierra... Ahora vamos
+modelar la
+luna, para lo cual a&ntilde;adimos un nuevo nodo Separator al nodo ROOT
+con una esfera. Editamos el radio de la esfer&aacute; para que sea
+menor que el de la tierra, por ejemplo 0.2<br>
+          <img alt="" src="tut01-04.jpg"
+ ><br></li>
+        <li>&iquest;No podemos ver la nueva esfera? No hay problema, es
+porque est&aacute; dentro del planeta tierra. Para colocarla en su
+sitio, podemos a&ntilde;adir un nodo Translation y desplazarlo 10
+unidades en el eje X. Luego, pulsar en el icono del ojo para que la
+c&aacute;mara se aleje lo suficiente como para ver toda la escena.<br>
+          <img alt="" src="tut01-05.jpg"
+ ><br></li>
+        <li>Ahora vamos a hacer que la luna gire alrededor de la
+tierra. Para
+ello introducimos un nodo Rotor delante del nodo Translation, y
+ajustamos el eje y la velocidad de giro, como hicimos en el paso 3. No
+es necesario introducir un nodo Rotor para que la luna gire sobre su
+eje, ya que siempre muestra la misma cara a la tierra.<br>
+          <img alt="" src="tut01-06.jpg"> <br>
+          <br>
+        </li>
+        <li>Este es el resultado que deber&iacute;amos obtener, con la
+            tierra y la luna girando autom&aacute;ticamente.<br>
+       <img alt="" src="tut01-07.jpg" ><br>
+        </li>
+      </ol>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,37 @@
+#Inventor V2.1 ascii
+
+
+Separator {
+
+  Separator {
+
+    Texture2 {
+      filename "earth.jpg"
+
+    }
+    Rotor {
+      rotation 0 1 0  2.7078924
+      speed 0.5
+
+    }
+    DEF earth Sphere {
+
+    }
+  }
+  Separator {
+
+    Rotor {
+      rotation 0 1 0  2.9971795
+      speed 0.2
+
+    }
+    Translation {
+      translation 10 0 0
+
+    }
+    DEF moon Sphere {
+      radius 0.2
+
+    }
+  }
+}

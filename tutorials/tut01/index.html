@@ -1,0 +1,94 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document translated from the Spanish by Winter Laite)==========-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Creating a planetary system with coindesigner</title>
+
+<!--(Meta)==========================================================-->
+
+<meta content="text/html; charset=windows-1252" http-equiv=content-type>
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1>Creating a planetary system with coindesigner</h1>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="width: 700px;"
+		width=700>
+
+<tr>
+<td>
+<ol>
+	
+	<li class=kadov-p
+		class=kadov-p>We begin by launching the application and creating 
+ a <span style="font-weight: bold;">Separator</span> for the planet Earth.<br>
+	<img src="tut01-01.jpg"
+		border=0></li>
+	
+	<li class=kadov-p
+		class=kadov-p>We add a <span style="font-weight: bold;">Texture2</span> 
+ node and load the file <span style="font-weight: bold;">earth.jpg</span>. 
+ We then add a <span style="font-weight: bold;">Sphere</span> node so we 
+ can model the planet Earth.<br>
+	<img src="tut01-02.jpg"
+		border=0></li>
+	
+	<li class=kadov-p
+		class=kadov-p>Now we're going to make our planet revolve. To do 
+ this we add a <span style="font-weight: bold;">Rotor</span> node, placing 
+ it above the <span style="font-weight: bold;">Sphere</span> node. We then 
+ edit the rotation values as shown for rotation around the axis, adjusting rotation 
+ speed to 0.5.<br><img src="tut01-03.jpg"
+					border=0></li>
+	
+	<li class=kadov-p
+		class=kadov-p>We're now finished modeling the Earth. Now we'll 
+ model the moon, adding a new <span style="font-weight: bold;">Separator</span> 
+ node, with a <span style="font-weight: bold;">Sphere</span>, to the ROOT 
+ node as shown. We edit the radius of the sphere so it will be less than 
+ that of Earth, 0.2 for example.<br><img src="tut01-04.jpg"
+								border=0></li>
+	
+	<li class=kadov-p
+		class=kadov-p>We can't see our new sphere? No problem. It's still 
+ inside our planet Earth. To put it in its proper place, we add a <span 
+ style="font-weight: bold;">Translation</span> node, displacing it 10 units 
+ along the X axis. Now click on the 'eye' icon (see step 6 for the location 
+ of the icon, on the right of the display) so the camera will move far 
+ enough away that the whole scene is visible.<br>
+	<img src="tut01-05.jpg"
+		border=0></li>
+	
+	<li class=kadov-p
+		class=kadov-p>Now we're going to make the moon revolve around the 
+ Earth. To do this, we insert a <span style="font-weight: bold;">Rotor</span> 
+ node before the <span style="font-weight: bold;">Translation</span> node 
+ and adjust rotation velocity, just as we did in step 3. (We don't need 
+ to insert a <span style="font-weight: bold;">Rotor</span> node to make 
+ the moon turn since it always presents the same face to the Earth.)<br><img 
+ src="tut01-06.jpg"
+	border=0> </li>
+	
+	<li class=kadov-p
+		class=kadov-p>Here's the result we should get, with the Earth and 
+ the moon revolving automatically.<br>
+	<img src="tut01-07.jpg"
+		border=0></li>
+</ol></td></tr>
+</table>
+
+</body>
+
+</html>

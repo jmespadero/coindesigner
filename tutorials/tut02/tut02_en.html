@@ -1,0 +1,169 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Translated from Spanish by Winter Laite )======================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Loading and Manipulating External Files -- Tutorial Two</title>
+
+<!--(Meta)==========================================================-->
+
+<meta content="text/html; charset=windows-1252" http-equiv=content-type>
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=6476>
+<meta name=layout-width content=983>
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<h1>Loading and manipulating external files</h1>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="width: 700px;"
+		width=700>
+
+<tr>
+<td>In this tutorial we'll cover the following topics: 
+<ul>
+	
+	<li >Importing external files</li>
+	
+	<li >Using <span style="font-weight: bold;">manips</span><span> 
+ to transform models in a scene</span></li>
+	
+	<li >Using <span style="font-weight: bold;">manips</span><span> 
+ to control the lighting in a scene</span></li>
+</ul>
+<h2>Step by step procedure</h2>
+<ol>
+	<li >We start by selecting option <span style="font-weight: bold;">Import 
+ Geometry </span><span>from the </span><span style="font-weight: bold;">Scene</span><span> 
+ menu and loading the file </span><span style="font-weight: bold;">cow.off</span> 
+ <br>
+	<img src="tut02_02.jpg"
+		style="width: 534px; height: 283px;"
+		width=534
+		height=283
+		border=0></li>
+	
+	<!--kadov_tag{{<implicit_empty_p>}}-->&nbsp;<br><!--kadov_tag{{</implicit_empty_p>}}-->
+	
+	<li >As we can see, coindesigner loads the file's content 
+ in a new <span style="font-weight: bold;">SoSeparator</span>. <br>
+	<img src="tut02_03.jpg"
+		style="width: 693px; height: 609px;"
+		width=693
+		height=609
+		border=0></li>
+	
+	<!--kadov_tag{{<implicit_empty_p>}}-->&nbsp;<br><!--kadov_tag{{</implicit_empty_p>}}-->
+	
+	<li>Imported files can be modified in the same way as 
+ all other <span style="font-style: italic;">inventor</span> nodes. Here, 
+ for example, we've added a <span style="font-weight: bold;">SoTexture2</span> 
+ node, applying the texture <span style="font-weight: bold;">cow_skin.png</span> 
+ to the imported geometry. <br>
+	<img src="tut02_04.jpg"
+		style="width: 689px; height: 606px;"
+		width=689
+		height=606
+		border=0></li>
+	
+	<!--kadov_tag{{<implicit_empty_p>}}-->&nbsp;<br><!--kadov_tag{{</implicit_empty_p>}}-->
+	
+	<li class=kadov-p>Now we use the same method to import the file <b>bunny.xyz</b>. 
+ We can see this object is much larger than the cow, so we'll try to reduce 
+ it in size. <br>
+	<img src="tut02_05.jpg"
+		style="width: 690px; height: 604px;"
+		width=690
+		height=604
+		border=0></li>
+	
+	<!--kadov_tag{{<implicit_empty_p>}}-->&nbsp;<br><!--kadov_tag{{</implicit_empty_p>}}-->
+	
+	<li class=kadov-p>We insert a <b>SoTabBoxManip</b> at the start of 
+ the second file's <span style="font-weight: bold;">SoSeparator</span>. 
+ <br>
+	<img src="tut02_06.jpg"
+		style="width: 690px; height: 615px;"
+		width=690
+		height=615
+		border=0></li>
+	
+	<!--kadov_tag{{<implicit_empty_p>}}-->&nbsp;<br><!--kadov_tag{{</implicit_empty_p>}}-->
+	
+	<li class=kadov-p>We reduce it in size (using the corner &quot;handles&quot; 
+ of the <span style="font-weight: bold;">SoTabBoxManip</span>), and move 
+ the rabbit to a new position (using the side &quot;handles&quot; of the 
+ <span style="font-weight: bold;">SoTabBoxManip</span>), until we've got 
+ our objects placed where we want them. <br>
+	<img src="tut02_07.jpg"
+		style="width: 693px; height: 621px;"
+		width=693
+		height=621
+		border=0></li>
+	
+	<!--kadov_tag{{<implicit_empty_p>}}-->&nbsp;<br><!--kadov_tag{{</implicit_empty_p>}}-->
+	
+	<li class=kadov-p>Now we right-click with the mouse on <span style="font-weight: bold;">SoTabBoxManip</span> 
+ and select the option <b>Convert to SoTransform</b>. <br>
+	<img src="tut02_08.jpg"
+		style="width: 686px; height: 617px;"
+		width=686
+		height=617
+		border=0></li>
+	
+	<!--kadov_tag{{<implicit_empty_p>}}-->&nbsp;<br><!--kadov_tag{{</implicit_empty_p>}}-->
+	
+	<li class=kadov-p>As we see, the <span style="font-weight: bold;">manip</span> 
+ disappears, leaving intact the transformations we've applied to the rabbit. 
+ <br>
+	<img src="tut02_09.jpg"
+		style="width: 687px; height: 615px;"
+		width=687
+		height=615
+		border=0></li>
+	
+	<!--kadov_tag{{<implicit_empty_p>}}-->&nbsp;<br><!--kadov_tag{{</implicit_empty_p>}}-->
+	
+	<li class=kadov-p>To illuminate our scene we add a <b>SoDirectionalLightManip</b> 
+ at the start of the scene, modifying the direction and color of the light 
+ to suit our taste. <br>
+	<img src="tut02_10.jpg"
+		style="width: 690px; height: 594px;"
+		width=690
+		height=594
+		border=0></li>
+	
+	<!--kadov_tag{{<implicit_empty_p>}}-->&nbsp;<br><!--kadov_tag{{</implicit_empty_p>}}-->
+	
+	<li class=kadov-p>We can convert the <span style="font-weight: bold;">soDirectionalLightManip</span> 
+ to a <b>SiDirectionalLight</b> by the same method we used before. We observe 
+ that the red light now only focuses on our objects from above. <br>
+	<img src="tut02_11.jpg"
+		style="width: 687px; height: 638px;"
+		width=687
+		height=638
+		border=0></li>
+</ol></td></tr>
+</table>
+
+</body>
+
+</html>
