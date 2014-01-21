@@ -67,6 +67,7 @@ USEMTL		return _USEMTL;
 BEGIN		return _BEGIN;
 END		return _END;
 bind            return _BIND;
+tex             return _TEX;
 
 solid		return _SOLID;
 ascii		return _ASCII;

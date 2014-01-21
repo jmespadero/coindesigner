@@ -110,7 +110,7 @@ extern int yy_ver_LF;
 %}
 
 %token _OFF _COFF _NOFF _NCOFF _STOFF _LIST _APPEARANCE _FILE
-%token _LF _MTLLIB _USEMTL _BEGIN _END _BIND _FACE
+%token _LF _MTLLIB _USEMTL _BEGIN _END _BIND _FACE _TEX
 %token _SOLID _ASCII _FACET _NORMAL _OUTER _LOOP _VERTEX 
 %token _ENDLOOP _ENDFACET _ENDSOLID
 
@@ -591,6 +591,13 @@ linea_SMF  : 'v' REAL REAL REAL
      yyMaterialBindingUsed = true;
   }
 
+  | 'r' REAL REAL
+  {
+     /* Almacenamos la informacion de textura */
+      int idx = yy_texture_coord->getNum();
+      yy_texture_coord->set1Value(idx,$2, $3);
+  }
+
   | 'v' 't' REAL REAL
   {
      /* Almacenamos la informacion de textura */
@@ -620,6 +627,27 @@ linea_SMF  : 'v' REAL REAL REAL
   | 'v' 'p' REAL REAL
   {
      /* Ignoramos la informacion */
+  }
+
+  | _TEX
+  {
+     //Filename of a texture
+     int tipo = yylex();
+     if (tipo == _CADENA)
+     {
+        //Eliminamos las comillas del final
+        yylval.pchar[strlen(yylval.pchar)-1] = 0;
+        //Creamos un nodo Texture2
+        SoTexture2 *yyTexture2 = new SoTexture2;
+        yyGeometry->insertChild(yyTexture2,1);
+        //Metemos el nombre del fichero, sin las comillas iniciales
+        yyTexture2->filename.setValue(yylval.pchar+1);
+     }
+     else
+     {
+        yyerror("Expected a file name enclosed with \"\".\n");
+        return -1;
+     }
   }
 
   | 'g'
