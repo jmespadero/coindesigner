@@ -3,4 +3,7 @@ cdsview
 coindesigner
 coindesigner.pro.user
 cdsview.pro.user
-coindesigner.pro.user
+*.swp
+*.diff
+*.patch
+
