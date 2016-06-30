@@ -28,6 +28,8 @@
 
 #include <string.h>
 #include <assert.h>
+#include <sstream>
+#include <locale>
 #include "cds_globals.h"
 #include "cds_parser.h"
 
@@ -87,7 +89,10 @@ endsolid	return _ENDSOLID;
                  }
 
 ([+-])?([0-9])*("."([0-9])*)?([eE]([+-])?([0-9])+)?           { 
-                   yylval.real = (float)atof(yytext);
+                   //yylval.real = (float)atof(yytext);
+                   std::istringstream istr(yytext);
+                   istr.imbue(std::locale("C"));
+                   istr >> yylval.real;
                    return _REAL;
                  }
 
@@ -114,6 +119,6 @@ endsolid	return _ENDSOLID;
 .              return (*yytext);
 %%
 
-/* Esto solo sirve para eliminar un warning del compilador */
-void funcionQueNoSeEjecutaNunca(void) { yyunput(0,"");}
+//This is just to avoid an unused-function warning 
+void  fakei_call_to_yyunput(void) { yyunput(0,(char *)"");}
 

@@ -25,6 +25,8 @@
 #include <Inventor/actions/SoWriteAction.h>
 #include <Inventor/SoInteraction.h>
 
+#include <Inventor/actions/SoSearchAction.h>
+
 #ifdef WIN32
   //SoWin includes
   #include <Inventor/Win/SoWin.h>
@@ -386,8 +388,8 @@ int main(int argc, char ** argv)
 
 	//If we choose to dump scene instead of render it...
 	if (out_filename)
-	{
-		//Escribimos el nombre de fichero
+	{       
+        //Escribimos el nombre de fichero
 		fprintf(stderr, "Writing file %s\n", out_filename);
 
 		//Creamos un SoWriteActon para escribir la escena
@@ -430,7 +432,7 @@ int main(int argc, char ** argv)
       renderTimer->schedule();
 
       //Show FPS
-      putenv("COIN_SHOW_FPS_COUNTER=1");
+      putenv((char*)"COIN_SHOW_FPS_COUNTER=1");
   }
 
 

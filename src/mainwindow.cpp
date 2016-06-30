@@ -102,26 +102,21 @@ extern QSettings *settings;
 #endif // macintosh
 
 
-/// Callback que vuelca errores de lectura de Inventor a un QMessageBox
+/// Callback to notify errors while loading a file
 static void readError_CB(const class SoError *error, void *)
 {
 	assert(error && error->getTypeId() == SoReadError::getClassTypeId() );
 
-	QString S;
-	S.sprintf("%s", error->getDebugString().getString() );
-
-	//anade mensaje a la consola de mensajes
-	global_mw->addMessage(S);
-	QMessageBox::critical(NULL, "Error", S);
+    //Add message to console and show it in a MEssageBox
+    global_mw->addMessage(error->getDebugString().getString());
+    QMessageBox::critical(NULL, "Error", error->getDebugString().getString());
 }
 
 /// Callback que vuelca errores de depuracion de COIN a la consola de mensajes
 static void debugError_CB(const class SoError *error, void *)
 {
-	QString S;
-	S.sprintf("%s", error->getDebugString().getString() );
-	//anade mensaje a la consola de mensajes
-	global_mw->addMessage(error->getDebugString().getString());
+    //Add message to console
+    global_mw->addMessage(error->getDebugString().getString());
 }
 
 

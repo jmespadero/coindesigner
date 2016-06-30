@@ -605,6 +605,8 @@ char *yytext;
 
 #include <string.h>
 #include <assert.h>
+#include <sstream>
+#include <locale>
 #include "cds_globals.h"
 #include "cds_parser.h"
 
@@ -623,7 +625,7 @@ unsigned yylinenum = 1;
 int yy_ver_LF = 0;
 
 void yyerror(const char *s);
-#line 627 "lex.yy.c"
+#line 629 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -810,10 +812,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 54 "src/cds_scanner.l"
+#line 56 "src/cds_scanner.l"
 
 
-#line 817 "lex.yy.c"
+#line 819 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -898,137 +900,137 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 56 "src/cds_scanner.l"
+#line 58 "src/cds_scanner.l"
 return _COFF;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 57 "src/cds_scanner.l"
+#line 59 "src/cds_scanner.l"
 return _OFF;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 58 "src/cds_scanner.l"
+#line 60 "src/cds_scanner.l"
 return _NOFF;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 59 "src/cds_scanner.l"
+#line 61 "src/cds_scanner.l"
 return _NCOFF;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 60 "src/cds_scanner.l"
+#line 62 "src/cds_scanner.l"
 return _NCOFF;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 61 "src/cds_scanner.l"
+#line 63 "src/cds_scanner.l"
 return _STOFF;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 62 "src/cds_scanner.l"
+#line 64 "src/cds_scanner.l"
 return _LIST;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 63 "src/cds_scanner.l"
+#line 65 "src/cds_scanner.l"
 return _APPEARANCE;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 64 "src/cds_scanner.l"
+#line 66 "src/cds_scanner.l"
 return _FILE;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 65 "src/cds_scanner.l"
+#line 67 "src/cds_scanner.l"
 return _MTLLIB;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 66 "src/cds_scanner.l"
+#line 68 "src/cds_scanner.l"
 return _USEMTL;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 67 "src/cds_scanner.l"
+#line 69 "src/cds_scanner.l"
 return _BEGIN;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 68 "src/cds_scanner.l"
+#line 70 "src/cds_scanner.l"
 return _END;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 69 "src/cds_scanner.l"
+#line 71 "src/cds_scanner.l"
 return _BIND;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 70 "src/cds_scanner.l"
+#line 72 "src/cds_scanner.l"
 return _TEX;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 72 "src/cds_scanner.l"
+#line 74 "src/cds_scanner.l"
 return _SOLID;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 73 "src/cds_scanner.l"
+#line 75 "src/cds_scanner.l"
 return _ASCII;
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 74 "src/cds_scanner.l"
+#line 76 "src/cds_scanner.l"
 return _FACET;
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 75 "src/cds_scanner.l"
+#line 77 "src/cds_scanner.l"
 return _NORMAL;
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 76 "src/cds_scanner.l"
+#line 78 "src/cds_scanner.l"
 return _OUTER;
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 77 "src/cds_scanner.l"
+#line 79 "src/cds_scanner.l"
 return _LOOP;
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 78 "src/cds_scanner.l"
+#line 80 "src/cds_scanner.l"
 return _VERTEX;
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 79 "src/cds_scanner.l"
+#line 81 "src/cds_scanner.l"
 return _FACE;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 80 "src/cds_scanner.l"
+#line 82 "src/cds_scanner.l"
 return _ENDLOOP;
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 81 "src/cds_scanner.l"
+#line 83 "src/cds_scanner.l"
 return _ENDFACET;
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 82 "src/cds_scanner.l"
+#line 84 "src/cds_scanner.l"
 return _ENDSOLID;
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 84 "src/cds_scanner.l"
+#line 86 "src/cds_scanner.l"
 { 
                    yylval.entero = atol(yytext);
                    return _ENTERO;
@@ -1036,35 +1038,38 @@ YY_RULE_SETUP
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 89 "src/cds_scanner.l"
+#line 91 "src/cds_scanner.l"
 { 
-                   yylval.real = (float)atof(yytext);
+                   //yylval.real = (float)atof(yytext);
+                   std::istringstream istr(yytext);
+                   istr.imbue(std::locale("C"));
+                   istr >> yylval.real;
                    return _REAL;
                  }
 	YY_BREAK
 case 29:
-#line 95 "src/cds_scanner.l"
+#line 100 "src/cds_scanner.l"
 case 30:
 YY_RULE_SETUP
-#line 95 "src/cds_scanner.l"
+#line 100 "src/cds_scanner.l"
 {yylval.pchar = strdup(yytext);
                   assert (yylval.pchar != NULL) ;
                   return _CADENA;}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 99 "src/cds_scanner.l"
+#line 104 "src/cds_scanner.l"
 /* Comentario de oogl */
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 100 "src/cds_scanner.l"
+#line 105 "src/cds_scanner.l"
 /* Texto blanco */
 	YY_BREAK
 case 33:
 /* rule 33 can match eol */
 YY_RULE_SETUP
-#line 102 "src/cds_scanner.l"
+#line 107 "src/cds_scanner.l"
 {     yylinenum++;
                        /* Si estamos vigilando saltos de linea */
                        if (yy_ver_LF)
@@ -1072,28 +1077,28 @@ YY_RULE_SETUP
                  }
 	YY_BREAK
 case YY_STATE_EOF(INITIAL):
-#line 108 "src/cds_scanner.l"
+#line 113 "src/cds_scanner.l"
 return (0);
 	YY_BREAK
 case 34:
-#line 111 "src/cds_scanner.l"
+#line 116 "src/cds_scanner.l"
 case 35:
 YY_RULE_SETUP
-#line 111 "src/cds_scanner.l"
+#line 116 "src/cds_scanner.l"
 {yyerror( "Cadena inacabada.");
                 return (-101);}
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 114 "src/cds_scanner.l"
+#line 119 "src/cds_scanner.l"
 return (*yytext);
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 115 "src/cds_scanner.l"
+#line 120 "src/cds_scanner.l"
 ECHO;
 	YY_BREAK
-#line 1097 "lex.yy.c"
+#line 1102 "lex.yy.c"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -2089,11 +2094,11 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 115 "src/cds_scanner.l"
+#line 120 "src/cds_scanner.l"
 
 
 
-/* Esto solo sirve para eliminar un warning del compilador */
-void funcionQueNoSeEjecutaNunca(void) { yyunput(0,"");}
+//This is just to avoid an unused-function warning 
+void  fakei_call_to_yyunput(void) { yyunput(0,(char *)"");}
 
 

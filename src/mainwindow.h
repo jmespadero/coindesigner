@@ -176,7 +176,7 @@ public slots:
 	void on_actionPromote_Children_activated();
 
 	///Embed external texture image files into the node
-	void on_actionEmbedTexture_activated(SoNode *node=NULL);
+    void on_actionEmbedTexture_activated(SoNode *node=NULL);
 
 	///Embed all textures in the scene
 	void on_actionEmbed_all_textures_activated ();
