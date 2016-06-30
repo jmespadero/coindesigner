@@ -65,7 +65,7 @@ private:
 	///Nombre de la escena
 	QString nombreEscena;
 
-	//Mapa que relaciona cada QTreeWidgetItem con un SoNode
+    ///Mapa que relaciona cada QTreeWidgetItem con un SoNode
 	std::map<QTreeWidgetItem*,SoNode*>mapQTCOIN;
 
 	///Acciones del menu para ficheros recientes

@@ -120,5 +120,5 @@ endsolid	return _ENDSOLID;
 %%
 
 //This is just to avoid an unused-function warning 
-void  fakei_call_to_yyunput(void) { yyunput(0,(char *)"");}
+void  fake_call_to_yyunput(void) { yyunput(0,(char *)"");}
 

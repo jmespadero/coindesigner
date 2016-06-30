@@ -89,7 +89,7 @@ int yylex (void);
 int yyparse (void);
 void yyrestart (FILE *input_file);
 
-/************** Variables de comunicación con el parser *******************/
+/************** Variables de comunicacion con el parser *******************/
 
 /* Fichero del que se leeran los datos a cargar */
 extern FILE *yyin;
@@ -336,7 +336,7 @@ int main(int argc, char ** argv)
 				exit (-1);
 			}
 
-			//Comprobamos que es un fichero válido de openInventor
+			//Comprobamos que es un fichero valido de openInventor
 			if (input->isValidFile ())
 			{
 				//Colgamos el fichero del nodo root
@@ -380,7 +380,7 @@ int main(int argc, char ** argv)
 
                         if (fileOk==false)
 			{
-				fprintf(stderr, "%s: Unknow file format.\n", argv[i]);
+                fprintf(stderr, "%s: Unknown file format.\n", argv[i]);
 				return -1;
 			}
 		}

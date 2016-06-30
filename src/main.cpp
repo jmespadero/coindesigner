@@ -24,6 +24,7 @@
 #include <QByteArray>
 #include <mainwindow.h>
 #include <settingsDialog.h>
+#include <QLibraryInfo>
 
 ///Objeto para almacenar la configuración de coindesigner
 QSettings *settings;

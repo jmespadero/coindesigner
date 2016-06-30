@@ -1798,9 +1798,8 @@ void qh_initialhull(setT *vertices) {
  A coplanar point may lead to a wide facet.  Options 'QbB' (scale to unit box)\n\
  or 'Qbb' (scale last coordinate) may remove this warning.  Use 'Pp' to skip\n\
  this warning.  See 'Limitations' in qh-impre.htm.\n",
-          -minangle);
-*/
-/* convert from angle between normals to angle between facets */
+          -minangle);*/
+//convert from angle between normals to angle between facets
 
   }
   zzval_(Zprocessed)= qh hull_dim+1;

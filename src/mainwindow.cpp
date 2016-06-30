@@ -333,7 +333,7 @@ bool MainWindow::load_Scene(QString filename)
     if (!scene)
     {
         QString S;
-        S=filename+tr(": Unknow file format");
+        S=filename+tr(": Unknown file format");
         QMessageBox::critical( this, tr("Error"), S);
         return false;
     }

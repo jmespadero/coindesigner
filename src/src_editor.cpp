@@ -93,7 +93,7 @@ SrcEditor::SrcEditor (SoSeparator *scene, bool readOnly, QWidget *p, Qt::WindowF
 	}
 	else
 	{
-		//Añadimos el boton Test
+		//Boton Test
 		Ui.buttonBox->addButton(tr("Test"), QDialogButtonBox::ApplyRole);
 	}
 
@@ -101,7 +101,7 @@ SrcEditor::SrcEditor (SoSeparator *scene, bool readOnly, QWidget *p, Qt::WindowF
 	char *src = cds_export_string(scene);
 	Ui.textEdit->setText(src);
 
-	//Inicializamos highlight dependiendo del tamaño del fuente
+	//Inicializamos highlight solo si es un fichero corto
 	Ui.enableHL->setChecked(strlen(src) < 50000);
 
 	//hl.setDocument(Ui.textEdit->document());
@@ -163,7 +163,7 @@ void SrcEditor::accept()
 	result = SoDB::readAll(&input);
 	delete buf;
 
-	//Solo aceptamos el dialogo si se compiló correctamente
+	//Solo aceptamos el dialogo si se compilo correctamente
 	if (result)
 		QDialog::accept();
 }// void SrcEditor::accept()
