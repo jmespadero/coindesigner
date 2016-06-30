@@ -165,7 +165,7 @@ void CdsEditorTemplate<SOTYPEVIEWER>::pickCallback (SoEventCallback * n)
 		global_mw->addMessage(S);
 
         SoMFVec3f coords;
-        SoNode *nodeCoord = buscaCoordenadas (path, coords);
+        SoNode *nodeCoord = searchLastCoordinate3Node (path, coords);
 
         if (nodeCoord)
         {
@@ -246,7 +246,7 @@ void CdsEditorTemplate<SOTYPEVIEWER>::pickCallback (SoEventCallback * n)
 		global_mw->addMessage(S);
 
         SoMFVec3f coords;
-        SoNode *nodeCoord = buscaCoordenadas (path, coords);
+        SoNode *nodeCoord = searchLastCoordinate3Node (path, coords);
 
         if (nodeCoord)
         {
@@ -288,7 +288,7 @@ void CdsEditorTemplate<SOTYPEVIEWER>::pickCallback (SoEventCallback * n)
 		//Mostramos informacion en barra de status
 		M.append(S.sprintf(" <> Point index=%d", idx));
         SoMFVec3f coords;
-        SoNode *nodeCoord = buscaCoordenadas (path, coords);
+        SoNode *nodeCoord = searchLastCoordinate3Node (path, coords);
         if (nodeCoord)
         {
           const char *nombre_tipo = nodeCoord->getTypeId().getName();  

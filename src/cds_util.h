@@ -90,9 +90,9 @@ SoSeparator *import_netgen_neutral(FILE *in);
 SoSeparator *import_tetgen (const char *nodeFilename);
 
 //! Busqueda del ultimo nodo SoCoordinate3 de un path 
-SoNode *buscaCoordenadas (const SoPath *path, SoMFVec3f &coords);
+SoNode *searchLastCoordinate3Node (const SoPath *path, SoMFVec3f &coords);
 
-//! Calcula la mímima BBox no orientada con los ejes
+//! Calcula la mimima BBox no orientada con los ejes
 SbXfBox3f measure_XfBBox(SoPath *path);
 
 //! Calcula el centro de masas de un vector de puntos
@@ -104,7 +104,7 @@ void center_new (SoMFVec3f &coords, const SbVec3f center);
 //! Triangulado de un IndexedFaceSet. Devuelve el numero de triangulos
 int IndexedFaceSet_triangulate (SoMFInt32 &coordIndex);
 
-//! Cambia la orientación de todas las facetas de un IndexedFaceSet
+//! Cambia la orientacion de todas las facetas de un IndexedFaceSet
 void IndexedFaceSet_change_orientation (SoMFInt32 &coordIndex);
 
 //! Conversion de un IndexedTriangleStripSet a IndexedFaceSet
@@ -126,10 +126,13 @@ bool cds_export_cppFile (const char *className, const char *filename);
 bool cds_export_ase (SoPath *path, const char *filename);
 
 //! Busca el ultimo nodo de un tipo dado en un path
-SoNode *buscaUltimoNodo(SoPath *p, const SoType t);
+SoNode *searchLastNode(SoPath *p, const SoType t);
 
 //! Remove all nodes of a given type
-void strip_node(SoType type, SoNode * root);
+void strip_node(const SoType type, SoNode * root);
+
+//! Remove all empty groups under a node
+void stripEmptyGroups(SoNode * root);
 
 #ifdef QIMAGE_H
   ///Convert a SoSFImage object into a QImage
