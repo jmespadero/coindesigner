@@ -112,7 +112,7 @@ http://mgarland.org/software/qslim20.html
 "If I have seen further, it is by standing upon the shoulders of giants"
 (Isaac Newton, but I found it in Oscar Robles PhD)
 Well, most of my giants are working on the [Modelling and Virtual Reality
-Group](http://www.gmrv.es) of the Rey Juan Carlos university. Their names are Marcos, Sofía, Oscar,
+Group](https://www.gmrv.es) of the Rey Juan Carlos university. Their names are Marcos, Sofía, Oscar,
 Susana, Pablo, Luis, Angel, Luismi, Cesar, Carolina, and many more people that
 work in the group.
 
