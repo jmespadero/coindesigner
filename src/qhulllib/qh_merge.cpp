@@ -126,7 +126,7 @@ void qh_premerge (vertexT *apex, realT maxcentrum, realT maxangle) {
     determine non-convex facets
     merge all non-convex facets
 */
-void qh_postmerge (char *reason, realT maxcentrum, realT maxangle, 
+void qh_postmerge (const char *reason, realT maxcentrum, realT maxangle, 
                       boolT vneighbors) {
   facetT *newfacet;
   boolT othermerges= False;
@@ -3614,7 +3614,7 @@ void qh_willdelete (facetT *facet, facetT *replace) {
 #else /* qh_NOmerge */
 void qh_premerge (vertexT *apex, realT maxcentrum, realT maxangle) {
 }
-void qh_postmerge (char *reason, realT maxcentrum, realT maxangle, 
+void qh_postmerge (const char *reason, realT maxcentrum, realT maxangle, 
                       boolT vneighbors) {
 }
 boolT qh_checkzero (boolT testall) {

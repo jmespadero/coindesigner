@@ -1,4 +1,4 @@
-
+#include <cstdlib>
 #include "qinterface.h"
 /*<html><pre>  -<a                             href="qh-globa.htm"
   >-------------------------------</a><a name="TOP">-</a>
@@ -44,7 +44,7 @@ qhT qh_qh;     		/* all global variables.
     recompile user_eg.c, rbox.c, qhull.c, qconvex.c, qdelaun.c qvoronoi.c, qhalf.c
 */
 
-char *qh_version = "2003.1 2003/12/30";
+const char *qh_version = "2003.1 2003/12/30";
 
 /*-<a                             href="qh-globa.htm#TOC"
   >-------------------------------</a><a name="appendprint">-</a>
@@ -396,10 +396,10 @@ void qh_freeqhull (boolT allmem) {
     called before error handling initialized
     qh_errexit() may not be used
 */
-void qh_init_A (FILE *infile, FILE *outfile, FILE *errfile, int argc, char *argv[]) {
+void qh_init_A (FILE *infile, FILE *outfile, FILE *errfile, int argc, const char *argv[]) {
   qh_meminit (errfile);
   qh_initqhull_start (infile, outfile, errfile);
-  qh_init_qhull_command (argc, argv);
+  qh_init_qhull_command (argc, (const char **)argv);
 } /* init_A */
 
 /*-<a                             href="qh-globa.htm#TOC"
@@ -483,9 +483,9 @@ void qh_init_B (coordT *points, int numpoints, int dim, boolT ismalloc) {
 
     argc/argv may be 0/NULL
 */
-void qh_init_qhull_command(int argc, char *argv[]) {
+void qh_init_qhull_command(int argc, const char *argv[]) {
   int i;
-  char *s;
+  char const *s;
 
   if (argc) {
     if ((s= strrchr( argv[0], '\\'))) /* Borland gives full path */
@@ -494,7 +494,7 @@ void qh_init_qhull_command(int argc, char *argv[]) {
       strcpy (qh qhull_command, argv[0]);
     if ((s= strstr (qh qhull_command, ".EXE"))
     ||  (s= strstr (qh qhull_command, ".exe")))
-      *s= '\0';
+      s= '\0';
   }
   for (i=1; i < argc; i++) {
     if (strlen (qh qhull_command) + strlen(argv[i]) + 1 < sizeof(qh qhull_command)) {
@@ -1232,7 +1232,7 @@ void qh_initflags(char *command) {
 
 	    s++;
 	    while (*s) {
-	      if (t - filename >= sizeof (filename)-2) {
+	      if (t - filename >= int(sizeof (filename))-2) {
 		gInterface->HullPrintf (qh ferr, "qhull error: filename for 'TI' too long.\n");
 		qh_errexit (qh_ERRinput, NULL, NULL);
 	      }
@@ -1264,7 +1264,7 @@ void qh_initflags(char *command) {
 	      s++;
 	    }
 	    while (*s) {
-	      if (t - filename >= sizeof (filename)-2) {
+	      if (t - filename >= int(sizeof (filename))-2) {              
 		gInterface->HullPrintf (qh ferr, "qhull error: filename for 'TO' too long.\n");
 		qh_errexit (qh_ERRinput, NULL, NULL);
 	      }
@@ -1914,7 +1914,7 @@ void qh_initthresholds(char *command) {
     will be printed with statistics ('Ts') and errors
     strlen(option) < 40
 */
-void qh_option (char *option, int *i, realT *r) {
+void qh_option (const char *option, int *i, realT *r) {
   char buf[200];
   int len, maxlen;
 

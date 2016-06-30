@@ -2776,7 +2776,7 @@ SoSeparator * MainWindow::cargarFichero3D(QString filename)
 
       //
       // open output file
-      char *outfile = "tmp.iv";
+      const char *outfile = "tmp.iv";
       FILE *out = fopen(outfile, "wb");
       if (!out) 
       {

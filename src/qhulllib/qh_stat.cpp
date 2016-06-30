@@ -460,7 +460,7 @@ void qh_initstatistics (void) {
   qh_allstatG();
   qh_allstatH();
   qh_allstatI();
-  if (qhstat next > sizeof(qhstat id)) {
+  if (size_t(qhstat next) > sizeof(qhstat id)) {
     gInterface->HullPrintf (qhmem.ferr, "qhull error (qh_initstatistics): increase size of qhstat.id[].\n\
       qhstat.next %d should be <= sizeof(qhstat id) %d\n", qhstat next, sizeof(qhstat id));
 #if 0 /* for locating error, Znumridges should be duplicated */
@@ -542,7 +542,7 @@ boolT qh_nostatistic (int i) {
   qh_printallstatistics( fp, string )
     print all statistics with header 'string'
 */
-void qh_printallstatistics (FILE *fp, char *string) {
+void qh_printallstatistics (FILE *fp, const char *string) {
 
   qh_allstatistics();
   qh_collectstatistics();
@@ -561,7 +561,7 @@ void qh_printallstatistics (FILE *fp, char *string) {
   see: 
     qh_printallstatistics()
 */
-void qh_printstatistics (FILE *fp, char *string) {
+void qh_printstatistics (FILE *fp, const char *string) {
   int i, k;
   realT ave;
   
@@ -621,7 +621,7 @@ void qh_printstatistics (FILE *fp, char *string) {
   notes:
     nop if id >= ZEND, printed, or same as initial value
 */
-void qh_printstatlevel (FILE *fp, int id, int start) {
+void qh_printstatlevel (FILE *fp, int id, int /*start*/) {
 #define NULLfield "       "
 
   if (id >= ZEND || qhstat printed[id])
@@ -630,7 +630,7 @@ void qh_printstatlevel (FILE *fp, int id, int start) {
     gInterface->HullPrintf (fp, "%s\n", qhstat doc[id]);
     return;
   }
-  start= 0; /* not used */
+  //start= 0; /* not used */
   if (qh_nostatistic(id) || !qhstat doc[id])
     return;
   qhstat printed[id]= True;
