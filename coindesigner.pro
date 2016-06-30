@@ -30,8 +30,8 @@ RCC_DIR = tmp
 #Coindesigner can show volumetrix data using the SIMVoleon library,
 #which you can download from http://dev.sim.no/SIM_Voleon/
 #To add support to SIMVoleon, uncoment next 3 lines.
-DEFINES += USE_VOLEON SIMVOLEON_DLL
-unix:LIBS += -lSimVoleon
+#DEFINES += USE_VOLEON SIMVOLEON_DLL
+#unix:LIBS += -lSimVoleon
 win32:LIBS += $(COIN3DDIR)\lib\simvoleon2.lib
 
 # Input
@@ -49,10 +49,10 @@ SOURCES +=	main.cpp	mainwindow.cpp	mainwindow2.cpp	cds_util.cpp	cds_viewers.cpp 
 		qh_qset.cpp      qhull.cpp 
 
 
-HEADERS	+=	src/mainwindow.h src/cds_util.h src/cds_globals.h \
-		src/3dsLoader.h src/src_editor.h src/mfield_editor.h \
-		src/qslim_options.h src/cds_viewers.h src/cppexport_options.h \
-		src/ivfix_options.h src/settingsDialog.h src/tetgen_options.h
+HEADERS	+=	mainwindow.h cds_util.h cds_globals.h \
+		3dsLoader.h src_editor.h mfield_editor.h \
+		qslim_options.h cds_viewers.h cppexport_options.h \
+		ivfix_options.h settingsDialog.h tetgen_options.h
 
 FORMS	=	ui/mainwindow.ui ui/cds_editor.ui ui/src_view.ui ui/mfield_editor.ui \
 			ui/cppexport_options.ui ui/ivfix_options.ui ui/qslim_options.ui \
