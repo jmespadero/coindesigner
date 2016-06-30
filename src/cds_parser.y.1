@@ -70,7 +70,6 @@ SoBlinker *yyBlinker;
 /* numero de puntos y de facetas */
 unsigned int yyNumeroFacetas;
 unsigned int yyNumeroPuntos;
-unsigned int yyNumeroColors;
 
 /* variable que almacena el numero de puntos leidos */
 int num_puntos=0;
@@ -115,7 +114,7 @@ extern int yy_ver_LF;
 %}
 
 %token _OFF _COFF _NOFF _NCOFF _STOFF _LIST _APPEARANCE _FILE
-%token _LF _MTLLIB _USEMTL _BEGIN _END _BIND _FACE _TEX
+%token _LF _MTLLIB _USEMTL _BEGIN _END
 %token _SOLID _ASCII _FACET _NORMAL _OUTER _LOOP _VERTEX
 %token _ENDLOOP _ENDFACET _ENDSOLID
 
@@ -197,16 +196,13 @@ fich_geom:
 
      yyNumeroFacetas = 0;
      yyNumeroPuntos = 0;
-     yyNumeroColors = 0;
      yylinenum = 1;
   }
   bloque_SMF
   {
      //Si el fichero no contenia coordenadas de textura, lo eliminamos
      if (yy_texture_coord->getNum() < 1)
-     {
        yyGeometry->removeChild(yyTextureCoordinate2);
-     }
 
      //Si el fichero no contenia coordenadas de normal, lo eliminamos
      if (yyNormal->vector.getNum() < 1)
@@ -285,6 +281,7 @@ bloque_appearance : _APPEARANCE '{'
 
              //Metemos el nombre del fichero, sin las comillas iniciales
              yyTexture2->filename.setValue(yylval.pchar+1);
+
           }
        }
      } // while
@@ -352,23 +349,6 @@ linea_SMF  : 'v' REAL REAL REAL
      yyMaterial->diffuseColor.set1Value(yyNumeroPuntos, $5, $6, $7);
      //yyMaterial->transparency.set1Value(yyNumeroPuntos, 0);
      yyNumeroPuntos++;
-  }
-
-  | _BIND 'c' _VERTEX
-  {
-     yyMaterialBinding->value=SoMaterialBinding::PER_VERTEX_INDEXED;  
-  }
-  
-  | _BIND 'c' _FACE
-  {
-     yyMaterialBinding->value=SoMaterialBinding::PER_FACE_INDEXED;  
-  }
-  
-  | 'c' REAL REAL REAL
-  {
-     // Almacenamos el color RGB
-     yyMaterial->diffuseColor.set1Value(yyNumeroColors, $2, $3, $4);
-     yyNumeroColors++;
   }
 
   | 'p' _ENTERO
@@ -628,14 +608,6 @@ linea_SMF  : 'v' REAL REAL REAL
          yy_texture_coord->set1Value(idx, 0, 0);
   }
 
-  | 'r' REAL REAL
-  {
-     // el equivalente a vt pero en fichero SMF
-      int idx = yy_texture_coord->getNum();
-      yy_texture_coord->set1Value(idx,$2, $3);
-  }
-
-
   | 'v' 'n' REAL REAL REAL
   {
      /* Almacenamos la informacion de normal */
@@ -652,28 +624,8 @@ linea_SMF  : 'v' REAL REAL REAL
   {
     std::string groupStr = LeeString();
     std::cout << "group name: " << groupStr << std::endl;
+
   }
-  
-  | _TEX
-  {
-    std::string textureName = LeeString();
-    std::cout << "texture name: " << textureName << std::endl;
-
-    //Creamos un nodo Texture2
-    SoTexture2 *yyTexture2 = new SoTexture2;    
-    yyGeometry->insertChild(yyTexture2, 2);
-    
-    if (textureName[0] == '"' )
-    {
-        std::string st = textureName.substr(1, textureName.size()-2);
-        textureName = st;
-        std::cout << "texture name: " << textureName << std::endl;
-    }
-
-    //Metemos el nombre del fichero, sin las comillas iniciales
-    yyTexture2->filename.setValue(textureName.c_str());
-  }
-
 
   | 'o'
   {
@@ -881,7 +833,6 @@ std::string LeeString()
     std::string str;
 
     //Indicamos al scanner que queremos ver los saltos de linea
-    int old_yy_ver_LF = yy_ver_LF;
     yy_ver_LF = 1;
 
     //Leemos hasta el fin de linea
@@ -896,8 +847,6 @@ std::string LeeString()
 
        str += yytext;
     }
-    
-    yy_ver_LF = old_yy_ver_LF;
 
     return str;
 }
