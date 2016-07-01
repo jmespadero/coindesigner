@@ -17,6 +17,7 @@
 
 */
 
+#include <fstream>
 #include "mainwindow.h"
 #include "cds_viewers.h"
 #include "cds_util.h"
@@ -107,7 +108,7 @@ static void readError_CB(const class SoError *error, void *)
 {
 	assert(error && error->getTypeId() == SoReadError::getClassTypeId() );
 
-    //Add message to console and show it in a MEssageBox
+    //Add message to console and show it in a MessageBox
     global_mw->addMessage(error->getDebugString().getString());
     QMessageBox::critical(NULL, "Error", error->getDebugString().getString());
 }
@@ -3626,14 +3627,22 @@ void MainWindow::on_sceneGraph_customContextMenuRequested(QPoint pos)
 	SoNode *nodo = mapQTCOIN[item];
 	SoType  tipo = nodo->getTypeId();
 
-	//Creacion del menu comun a todos los nodos (con excepciones para root)
-	if (nodo != root)
+    //Check if we must hide destructive (cut, delete, ...) options
+    bool protectedNode = (nodo == root) || tipo.isDerivedFrom(SoVertexProperty::getClassTypeId());
+     
+	//Creacion del menu comun a todos los nodos (con excepciones para nodos protegidos)
+	if (!protectedNode)
 	{
 		menu.addAction(Ui.actionCut);
 	}
-	menu.addAction(Ui.actionCopy);
-	menu.addAction(Ui.actionPaste);
-	if (nodo != root)
+
+    if (!tipo.isDerivedFrom(SoVertexProperty::getClassTypeId()))
+    {
+        menu.addAction(Ui.actionCopy);
+        menu.addAction(Ui.actionPaste);
+    }
+
+	if (!protectedNode)
 	{
 		menu.addAction(Ui.actionDelete);
 		menu.addAction(Ui.actionMove_Up);
@@ -3778,6 +3787,7 @@ void MainWindow::on_sceneGraph_customContextMenuRequested(QPoint pos)
 		menu.addAction(Ui.SoCoordinate3_to_qhull);
 		menu.addAction(Ui.Center_on_Origin);
 		menu.addAction(Ui.Export_to_XYZ);
+		menu.addAction(Ui.Export_to_PCD);
 	}
 	else if (tipo == SoVRMLIndexedFaceSet::getClassTypeId()) 
 	{
@@ -3820,7 +3830,13 @@ void MainWindow::on_sceneGraph_customContextMenuRequested(QPoint pos)
 		Ui.Convert_Manip->setText(tr("Convert in")+" SoTransform");
 		menu.addAction(Ui.Convert_Manip);
 	}
-	
+    else if (tipo.isDerivedFrom(SoVertexProperty::getClassTypeId())) 
+    {
+		menu.addAction(Ui.Center_on_Origin);
+		menu.addAction(Ui.Export_to_XYZ);
+		menu.addAction(Ui.Export_to_PCD);
+    }
+    
 	//Mostramos el menu popup
 	menu.exec(Ui.sceneGraph->mapToGlobal(pos));
 
@@ -4347,6 +4363,7 @@ void MainWindow::on_Export_to_STL_activated()
 
 }// void MainWindow::on_Export_to_STL_activated()
 
+///Exporta un SoCoordinate3 o SoVertexProperty a un fichero .xyz
 void MainWindow::on_Export_to_XYZ_activated()
 {
 	//Nombre del fichero donde escribir
@@ -4384,6 +4401,71 @@ void MainWindow::on_Export_to_XYZ_activated()
     fclose(file);
 
 }// void MainWindow::on_Export_to_XYZ_activated()
+
+///Exporta un SoCoordinate3 o SoVertexProperty a un fichero .PCD
+void MainWindow::on_Export_to_PCD_activated() {
+    QString filename = QFileDialog::getSaveFileName(this, tr("Export File"), "",
+		tr("PCD Files")+" (*.pcd);;"+tr("All Files")+" (*)");
+
+    if (filename.isEmpty()) 
+        return;
+            
+    //Identificamos el item actual
+    QTreeWidgetItem * item=Ui.sceneGraph->currentItem();
+    
+    const SbVec3f *coords=NULL;
+    int numVert = 0;
+    
+    //Search the container of coordinates
+    if (mapQTCOIN[item]->getTypeId().isDerivedFrom(SoCoordinate3::getClassTypeId())) 
+    {
+       SoCoordinate3 *nodo = (SoCoordinate3 *)mapQTCOIN[item];
+       coords = nodo->point.getValues(0);
+       numVert = nodo->point.getNum();   
+    }
+    else if (mapQTCOIN[item]->getTypeId().isDerivedFrom(SoVertexProperty::getClassTypeId())) 
+    {
+       SoVertexProperty *nodo = (SoVertexProperty *)mapQTCOIN[item];
+       coords = nodo->vertex.getValues(0);
+       numVert = nodo->vertex.getNum();   
+    }
+    else
+    {
+        //Add message to console and show it in a MessageBox
+        __chivato__;
+        qDebug("Error interno: No es nodo de coordenadas\n");
+        return;
+    }
+
+    //Create a file 
+    std::ofstream fs(filename.toStdString().c_str());
+
+   //Create header in .pcd format
+   //http://pointclouds.org/documentation/tutorials/pcd_file_format.php
+    fs << "# .PCD v.7 - Point Cloud Data file format" << std::endl;
+    fs << "VERSION .7" << std::endl;
+    fs << "FIELDS x y z" << std::endl;
+    fs << "SIZE 4 4 4" << std::endl;
+    fs << "TYPE F F F" << std::endl;
+    fs << "COUNT 1 1 1" << std::endl;
+    fs << "WIDTH "<< numVert << std::endl;
+    fs << "HEIGHT 1" << std::endl;
+    fs << "VIEWPOINT 0 0 0 1 0 0 0" << std::endl;
+    fs << "POINTS "<< numVert << std::endl;
+    fs << "DATA ascii" << std::endl;
+
+    //Dump coordinates
+    for (int i=0; i < numVert; i++)
+    {
+        float x, y, z;
+        coords[i].getValue(x,y,z);
+        fs << x << " " <<  y << " " << z << std::endl;
+    }
+
+    fs.close();
+    
+}//void MainWindow::on_actionExport_PCD_activated()
+
 
 void MainWindow::on_Center_on_Origin_activated()
 {

@@ -88,308 +88,309 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/mainwindow.cpp" line="236"/>
+        <location filename="../src/mainwindow.cpp" line="237"/>
         <source>Current scene has been modified.</source>
         <translation>La escena actual ha sido modificada.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="237"/>
+        <location filename="../src/mainwindow.cpp" line="238"/>
         <source>Do you want to save the changes to this scene?</source>
         <translation>¿Desea salvar los cambios de esta escena?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="238"/>
+        <location filename="../src/mainwindow.cpp" line="239"/>
         <source>Save</source>
         <translation>Salvar</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="238"/>
+        <location filename="../src/mainwindow.cpp" line="239"/>
         <source>Discard</source>
         <translation>Descartar</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="238"/>
+        <location filename="../src/mainwindow.cpp" line="239"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="310"/>
-        <location filename="../src/mainwindow.cpp" line="435"/>
-        <location filename="../src/mainwindow.cpp" line="3519"/>
+        <location filename="../src/mainwindow.cpp" line="311"/>
+        <location filename="../src/mainwindow.cpp" line="436"/>
+        <location filename="../src/mainwindow.cpp" line="3520"/>
         <source>OpenInventor Files</source>
         <translation>Ficheros de OpenInventor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="312"/>
-        <location filename="../src/mainwindow.cpp" line="314"/>
-        <location filename="../src/mainwindow.cpp" line="438"/>
-        <location filename="../src/mainwindow.cpp" line="440"/>
+        <location filename="../src/mainwindow.cpp" line="313"/>
+        <location filename="../src/mainwindow.cpp" line="315"/>
+        <location filename="../src/mainwindow.cpp" line="439"/>
+        <location filename="../src/mainwindow.cpp" line="441"/>
         <source>3D Surface Files</source>
         <translation>Ficheros 3D</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="317"/>
-        <location filename="../src/mainwindow.cpp" line="443"/>
+        <location filename="../src/mainwindow.cpp" line="318"/>
+        <location filename="../src/mainwindow.cpp" line="444"/>
         <source>Volume Data Files</source>
         <translation>Ficheros de datos volumétricos</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="319"/>
-        <location filename="../src/mainwindow.cpp" line="556"/>
-        <location filename="../src/mainwindow.cpp" line="584"/>
-        <location filename="../src/mainwindow.cpp" line="3520"/>
-        <location filename="../src/mainwindow.cpp" line="4215"/>
-        <location filename="../src/mainwindow.cpp" line="4277"/>
-        <location filename="../src/mainwindow.cpp" line="4319"/>
-        <location filename="../src/mainwindow.cpp" line="4354"/>
+        <location filename="../src/mainwindow.cpp" line="320"/>
+        <location filename="../src/mainwindow.cpp" line="557"/>
+        <location filename="../src/mainwindow.cpp" line="585"/>
+        <location filename="../src/mainwindow.cpp" line="3521"/>
+        <location filename="../src/mainwindow.cpp" line="4231"/>
+        <location filename="../src/mainwindow.cpp" line="4293"/>
+        <location filename="../src/mainwindow.cpp" line="4335"/>
+        <location filename="../src/mainwindow.cpp" line="4371"/>
+        <location filename="../src/mainwindow.cpp" line="4408"/>
         <source>All Files</source>
         <translation>Todos los ficheros</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="321"/>
-        <location filename="../src/mainwindow.cpp" line="447"/>
+        <location filename="../src/mainwindow.cpp" line="322"/>
+        <location filename="../src/mainwindow.cpp" line="448"/>
         <source>Load Scene</source>
         <translation>Cargar escena</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="336"/>
         <source>: Unknow file format</source>
-        <translation>: Formato de fichero desconocido</translation>
+        <translation type="obsolete">: Formato de fichero desconocido</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="337"/>
-        <location filename="../src/mainwindow.cpp" line="463"/>
-        <location filename="../src/mainwindow.cpp" line="1859"/>
-        <location filename="../src/mainwindow.cpp" line="2539"/>
-        <location filename="../src/mainwindow.cpp" line="2723"/>
-        <location filename="../src/mainwindow.cpp" line="2759"/>
-        <location filename="../src/mainwindow.cpp" line="2773"/>
-        <location filename="../src/mainwindow.cpp" line="2786"/>
-        <location filename="../src/mainwindow.cpp" line="2801"/>
-        <location filename="../src/mainwindow.cpp" line="2825"/>
-        <location filename="../src/mainwindow.cpp" line="3954"/>
+        <location filename="../src/mainwindow.cpp" line="338"/>
+        <location filename="../src/mainwindow.cpp" line="464"/>
+        <location filename="../src/mainwindow.cpp" line="1860"/>
+        <location filename="../src/mainwindow.cpp" line="2540"/>
+        <location filename="../src/mainwindow.cpp" line="2724"/>
+        <location filename="../src/mainwindow.cpp" line="2760"/>
+        <location filename="../src/mainwindow.cpp" line="2774"/>
+        <location filename="../src/mainwindow.cpp" line="2787"/>
+        <location filename="../src/mainwindow.cpp" line="2802"/>
+        <location filename="../src/mainwindow.cpp" line="2826"/>
+        <location filename="../src/mainwindow.cpp" line="3970"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="383"/>
-        <location filename="../src/mainwindow.cpp" line="554"/>
-        <location filename="../src/mainwindow.cpp" line="582"/>
+        <location filename="../src/mainwindow.cpp" line="384"/>
+        <location filename="../src/mainwindow.cpp" line="555"/>
+        <location filename="../src/mainwindow.cpp" line="583"/>
         <source>Save File</source>
         <translation>Salvar fichero</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="384"/>
+        <location filename="../src/mainwindow.cpp" line="385"/>
         <source>OpenInventor Files (*.iv *.wrl);;All Files (*)</source>
         <translation>Ficheros de OpenInventor (*.iv *.wrl);;Todos los ficheros (*)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="445"/>
+        <location filename="../src/mainwindow.cpp" line="446"/>
         <source>All Files (*)</source>
         <translation>Todos los ficheros (*)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="462"/>
+        <location filename="../src/mainwindow.cpp" line="463"/>
         <source>: File format unknow</source>
         <translation>: Formato de fichero desconocido</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="556"/>
+        <location filename="../src/mainwindow.cpp" line="557"/>
         <source>VRML Files</source>
         <translation>Ficheros VRML</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="912"/>
-        <location filename="../src/mainwindow.cpp" line="1342"/>
-        <location filename="../src/mainwindow.cpp" line="1360"/>
-        <location filename="../src/mainwindow.cpp" line="2056"/>
-        <location filename="../src/mainwindow.cpp" line="2115"/>
-        <location filename="../src/mainwindow.cpp" line="2166"/>
-        <location filename="../src/mainwindow.cpp" line="2212"/>
-        <location filename="../src/mainwindow.cpp" line="2221"/>
-        <location filename="../src/mainwindow.cpp" line="2243"/>
-        <location filename="../src/mainwindow.cpp" line="3179"/>
-        <location filename="../src/mainwindow.cpp" line="4062"/>
-        <location filename="../src/mainwindow.cpp" line="4105"/>
-        <location filename="../src/mainwindow.cpp" line="4540"/>
+        <location filename="../src/mainwindow.cpp" line="913"/>
+        <location filename="../src/mainwindow.cpp" line="1343"/>
+        <location filename="../src/mainwindow.cpp" line="1361"/>
+        <location filename="../src/mainwindow.cpp" line="2057"/>
+        <location filename="../src/mainwindow.cpp" line="2116"/>
+        <location filename="../src/mainwindow.cpp" line="2167"/>
+        <location filename="../src/mainwindow.cpp" line="2213"/>
+        <location filename="../src/mainwindow.cpp" line="2222"/>
+        <location filename="../src/mainwindow.cpp" line="2244"/>
+        <location filename="../src/mainwindow.cpp" line="3180"/>
+        <location filename="../src/mainwindow.cpp" line="4078"/>
+        <location filename="../src/mainwindow.cpp" line="4121"/>
+        <location filename="../src/mainwindow.cpp" line="4622"/>
         <source>Warning</source>
         <translation>Aviso</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="912"/>
+        <location filename="../src/mainwindow.cpp" line="913"/>
         <source>You can not paste as link this node here.</source>
         <translation>No puede pegar como enlace aquí.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1265"/>
+        <location filename="../src/mainwindow.cpp" line="1266"/>
         <source>Written by</source>
         <translation>Escrito por</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1265"/>
+        <location filename="../src/mainwindow.cpp" line="1266"/>
         <source>and</source>
         <translation>y</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1270"/>
+        <location filename="../src/mainwindow.cpp" line="1271"/>
         <source>System info:</source>
         <translation>Información del sistema:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1293"/>
-        <location filename="../src/mainwindow.cpp" line="1303"/>
+        <location filename="../src/mainwindow.cpp" line="1294"/>
+        <location filename="../src/mainwindow.cpp" line="1304"/>
         <source>not found.</source>
         <translation>no encontrado.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1307"/>
+        <location filename="../src/mainwindow.cpp" line="1308"/>
         <source>Debug Info:</source>
         <translation>Informacion de depuración:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1341"/>
+        <location filename="../src/mainwindow.cpp" line="1342"/>
         <source>Unknow option</source>
         <translation>Opción desconocida</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1360"/>
+        <location filename="../src/mainwindow.cpp" line="1361"/>
         <source>Unknow SoType:</source>
         <translation>Tipo desconocido:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1854"/>
+        <location filename="../src/mainwindow.cpp" line="1855"/>
         <source>Edit</source>
         <translation>Editar</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1859"/>
+        <location filename="../src/mainwindow.cpp" line="1860"/>
         <source>No support for type: </source>
         <translation>Tipo no soportado:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1900"/>
+        <location filename="../src/mainwindow.cpp" line="1901"/>
         <source>Name=</source>
         <translation>Nombre=</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1905"/>
+        <location filename="../src/mainwindow.cpp" line="1906"/>
         <source>rc=</source>
         <translation>rc=</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1913"/>
-        <location filename="../src/mainwindow.cpp" line="1921"/>
+        <location filename="../src/mainwindow.cpp" line="1914"/>
+        <location filename="../src/mainwindow.cpp" line="1922"/>
         <source>Faces:</source>
         <translation>Facetas:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1930"/>
-        <location filename="../src/mainwindow.cpp" line="1942"/>
+        <location filename="../src/mainwindow.cpp" line="1931"/>
+        <location filename="../src/mainwindow.cpp" line="1943"/>
         <source>Points:</source>
         <translation>Puntos:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1934"/>
-        <location filename="../src/mainwindow.cpp" line="1946"/>
+        <location filename="../src/mainwindow.cpp" line="1935"/>
+        <location filename="../src/mainwindow.cpp" line="1947"/>
         <source>Center:</source>
         <translation>Centro:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2055"/>
+        <location filename="../src/mainwindow.cpp" line="2056"/>
         <source>Invalid value for field:</source>
         <translation>Valor inválido para campo:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2114"/>
-        <location filename="../src/mainwindow.cpp" line="2165"/>
+        <location filename="../src/mainwindow.cpp" line="2115"/>
+        <location filename="../src/mainwindow.cpp" line="2166"/>
         <source>No valid value for:</source>
         <translation>Valor inválido para:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2211"/>
+        <location filename="../src/mainwindow.cpp" line="2212"/>
         <source>Unsupported type:</source>
         <translation>Tipo no soportado:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2219"/>
+        <location filename="../src/mainwindow.cpp" line="2220"/>
         <source>There are %d nodes with the name:</source>
         <translation>Hay %d nodos con el nombre:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2242"/>
+        <location filename="../src/mainwindow.cpp" line="2243"/>
         <source>: Unsupported type</source>
         <translation>:Tipo no soportado</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2270"/>
-        <location filename="../src/mainwindow.cpp" line="2330"/>
+        <location filename="../src/mainwindow.cpp" line="2271"/>
+        <location filename="../src/mainwindow.cpp" line="2331"/>
         <source>Critical Error</source>
         <translation>Error crítico</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2538"/>
+        <location filename="../src/mainwindow.cpp" line="2539"/>
         <source>Error while executing: </source>
         <translation>Error durante ejecución:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2722"/>
-        <location filename="../src/mainwindow.cpp" line="2758"/>
-        <location filename="../src/mainwindow.cpp" line="3062"/>
+        <location filename="../src/mainwindow.cpp" line="2723"/>
+        <location filename="../src/mainwindow.cpp" line="2759"/>
+        <location filename="../src/mainwindow.cpp" line="3063"/>
         <source>: Error while opening file.</source>
         <translation>: Error al abrir el fichero.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2771"/>
+        <location filename="../src/mainwindow.cpp" line="2772"/>
         <source>%s: Error while reading DXF file on line %d
 </source>
         <translation>%s: Error leyendo fichero DXF en línea %d</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2784"/>
+        <location filename="../src/mainwindow.cpp" line="2785"/>
         <source>%s: Error writting temporaly file</source>
         <translation>%s: Error al escribir fichero temporal</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2799"/>
+        <location filename="../src/mainwindow.cpp" line="2800"/>
         <source>%s: Error while converting from DXF to OpenInventor</source>
         <translation>%s: Error durante la conversión de DXF a OpenInventor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="2823"/>
+        <location filename="../src/mainwindow.cpp" line="2824"/>
         <source>%s: Error loading temporaly file</source>
         <translation>%s: Error al leer fichero temporal</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3180"/>
+        <location filename="../src/mainwindow.cpp" line="3181"/>
         <source>Embed all textures of the scene will increase the size of the scene file because textures are stored uncompressed. This method will affect all SoTexture2 and SoBumpMap nodes in the scene.
 Are you sure you want to embed all textures?</source>
         <translation>Incluir todas las texturas de la escena aumentará el tamaño del fichero de escena porque las texturas se almacenan sin comprimir. Este método afectará a todos los nodos SoTexture2 y SoBumpMap de la escena.\n ¿Está seguro de incluir todas las texturas?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3507"/>
+        <location filename="../src/mainwindow.cpp" line="3508"/>
         <source>Insert filename</source>
         <translation>Introduzca nombre de fichero</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3517"/>
+        <location filename="../src/mainwindow.cpp" line="3518"/>
         <source>Choose Filename</source>
         <translation>Elija nombre de fichero</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3518"/>
+        <location filename="../src/mainwindow.cpp" line="3519"/>
         <source>Image files</source>
         <translation>Ficheros de imagen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3623"/>
+        <location filename="../src/mainwindow.cpp" line="3624"/>
         <source>Export to...</source>
         <translation>Exportar a...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4214"/>
-        <location filename="../src/mainwindow.cpp" line="4276"/>
-        <location filename="../src/mainwindow.cpp" line="4318"/>
-        <location filename="../src/mainwindow.cpp" line="4353"/>
+        <location filename="../src/mainwindow.cpp" line="4230"/>
+        <location filename="../src/mainwindow.cpp" line="4292"/>
+        <location filename="../src/mainwindow.cpp" line="4334"/>
+        <location filename="../src/mainwindow.cpp" line="4370"/>
+        <location filename="../src/mainwindow.cpp" line="4407"/>
         <source>Export File</source>
         <translation>Exportar</translation>
     </message>
@@ -792,309 +793,324 @@ Are you sure you want to embed all textures?</source>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="725"/>
+        <source>Export to PCD</source>
+        <translation>Exportar a PCD</translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="733"/>
         <source>Center on Origin</source>
         <translation>Centrar en origen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="733"/>
+        <location filename="../ui/mainwindow.ui" line="741"/>
         <source>Change BG color</source>
         <translation>Cambiar color de fondo</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="741"/>
+        <location filename="../ui/mainwindow.ui" line="749"/>
         <source>Simplify with QSlim</source>
         <translation>Simplificar con QSlim</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="752"/>
+        <location filename="../ui/mainwindow.ui" line="760"/>
         <source>Tetrahedralize with tetgen</source>
         <translation>Tetrahedralizar con tetgen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="760"/>
+        <location filename="../ui/mainwindow.ui" line="768"/>
         <source>Center XYZ</source>
         <translation>Centrar XYZ</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="771"/>
+        <location filename="../ui/mainwindow.ui" line="779"/>
         <source>Enable Antialias</source>
         <translation>Activar Antialias</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="782"/>
+        <location filename="../ui/mainwindow.ui" line="790"/>
         <source>HQ transparency</source>
         <translation>Transparencia HQ</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="793"/>
+        <location filename="../ui/mainwindow.ui" line="801"/>
         <source>Feedback Visibility</source>
         <translation>Ver orientación</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="801"/>
+        <location filename="../ui/mainwindow.ui" line="809"/>
         <source>Convert to SoCenterballManip</source>
         <translation>Convertir en SoCenterballManip</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="809"/>
+        <location filename="../ui/mainwindow.ui" line="817"/>
         <source>Convert to SoHandleBoxManip</source>
         <translation>Convertir en SoHandleBoxManip</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="817"/>
+        <location filename="../ui/mainwindow.ui" line="825"/>
         <source>Convert to SoJackManip</source>
         <translation>Convertir en SoJackManip</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="825"/>
+        <location filename="../ui/mainwindow.ui" line="833"/>
         <source>Convert to SoTabBoxManip</source>
         <translation>Convertir en SoTabBoxManip</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="833"/>
+        <location filename="../ui/mainwindow.ui" line="841"/>
         <source>Convert to SoTrackballManip</source>
         <translation>Convertir en SoTrackballManip</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="841"/>
+        <location filename="../ui/mainwindow.ui" line="849"/>
         <source>Convert to SoTransformBoxManip</source>
         <translation>Convertir en SoTransformBoxManip</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="849"/>
+        <location filename="../ui/mainwindow.ui" line="857"/>
         <source>Convert to SoTransformerManip</source>
         <translation>Convertir en SoTransformerManip</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="857"/>
+        <location filename="../ui/mainwindow.ui" line="865"/>
         <source>Convert to triangle mesh</source>
         <translation>Triangular facetas</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="865"/>
+        <location filename="../ui/mainwindow.ui" line="873"/>
         <source>Change all faces orientation</source>
         <translation>Cambiar orientación de las facetas</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="873"/>
+        <location filename="../ui/mainwindow.ui" line="881"/>
         <source>Convert to SoIndexedFaceSet</source>
         <translation>Convertir en IndexedFaceSet</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3662"/>
-        <location filename="../src/mainwindow.cpp" line="3677"/>
-        <location filename="../src/mainwindow.cpp" line="3683"/>
-        <location filename="../src/mainwindow.cpp" line="3689"/>
-        <location filename="../src/mainwindow.cpp" line="3695"/>
-        <location filename="../src/mainwindow.cpp" line="3701"/>
-        <location filename="../src/mainwindow.cpp" line="3707"/>
-        <location filename="../src/mainwindow.cpp" line="3713"/>
-        <location filename="../src/mainwindow.cpp" line="3719"/>
-        <location filename="../src/mainwindow.cpp" line="3725"/>
-        <location filename="../src/mainwindow.cpp" line="3731"/>
-        <location filename="../src/mainwindow.cpp" line="3737"/>
-        <location filename="../src/mainwindow.cpp" line="3743"/>
-        <location filename="../src/mainwindow.cpp" line="3749"/>
-        <location filename="../src/mainwindow.cpp" line="3820"/>
+        <location filename="../src/mainwindow.cpp" line="3671"/>
+        <location filename="../src/mainwindow.cpp" line="3686"/>
+        <location filename="../src/mainwindow.cpp" line="3692"/>
+        <location filename="../src/mainwindow.cpp" line="3698"/>
+        <location filename="../src/mainwindow.cpp" line="3704"/>
+        <location filename="../src/mainwindow.cpp" line="3710"/>
+        <location filename="../src/mainwindow.cpp" line="3716"/>
+        <location filename="../src/mainwindow.cpp" line="3722"/>
+        <location filename="../src/mainwindow.cpp" line="3728"/>
+        <location filename="../src/mainwindow.cpp" line="3734"/>
+        <location filename="../src/mainwindow.cpp" line="3740"/>
+        <location filename="../src/mainwindow.cpp" line="3746"/>
+        <location filename="../src/mainwindow.cpp" line="3752"/>
+        <location filename="../src/mainwindow.cpp" line="3758"/>
+        <location filename="../src/mainwindow.cpp" line="3830"/>
         <source>Convert in</source>
         <translation>Convertir en</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4215"/>
-        <location filename="../src/mainwindow.cpp" line="4277"/>
-        <location filename="../src/mainwindow.cpp" line="4319"/>
-        <location filename="../src/mainwindow.cpp" line="4354"/>
+        <location filename="../src/mainwindow.cpp" line="4231"/>
+        <location filename="../src/mainwindow.cpp" line="4293"/>
+        <location filename="../src/mainwindow.cpp" line="4335"/>
+        <location filename="../src/mainwindow.cpp" line="4371"/>
         <source>Files</source>
         <translation>Ficheros</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="884"/>
+        <location filename="../ui/mainwindow.ui" line="892"/>
         <source>Watch node</source>
         <translation>Vigilar nodo</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="887"/>
+        <location filename="../ui/mainwindow.ui" line="895"/>
         <source>Ctrl+W</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3388"/>
+        <location filename="../src/mainwindow.cpp" line="3389"/>
         <source>Import:</source>
         <translation>Importando:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="895"/>
+        <location filename="../ui/mainwindow.ui" line="903"/>
         <source>Node Reference</source>
         <translation>Referencia del Nodo</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="898"/>
+        <location filename="../ui/mainwindow.ui" line="906"/>
         <source>F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1564"/>
+        <location filename="../src/mainwindow.cpp" line="1565"/>
         <source>Slave Field:</source>
         <translation>Campo esclavo:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="906"/>
+        <location filename="../ui/mainwindow.ui" line="914"/>
         <source>Engine demo</source>
         <translation>Demo Engine</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="782"/>
+        <location filename="../src/mainwindow.cpp" line="783"/>
         <source>Are you crazy? I&apos;m the root node.</source>
         <translation>¿Estás loco? Yo soy el nodo root.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="866"/>
+        <location filename="../src/mainwindow.cpp" line="867"/>
         <source>No way, I&apos;m Connor MacLeod (see http://imdb.com/title/tt0091203/ )</source>
         <translation>Ni hablar, me siento como Connor MacLeod (http://imdb.com/title/tt0091203/ )</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="935"/>
+        <location filename="../src/mainwindow.cpp" line="936"/>
         <source>This is the high you can reach being a root node :-(</source>
         <translation>Esto es lo más alto que puedes llegar siendo un nodo root :-(</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="977"/>
+        <location filename="../src/mainwindow.cpp" line="978"/>
         <source>Don&apos;t let me down!!! I&apos;m the root node.</source>
         <translation>¡No me hundas! Soy el nodo root.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1520"/>
-        <location filename="../src/mainwindow.cpp" line="1539"/>
+        <location filename="../src/mainwindow.cpp" line="1521"/>
+        <location filename="../src/mainwindow.cpp" line="1540"/>
         <source>This field is conected as slave of:</source>
         <translation>Este campo está conectado como esclavo de:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1552"/>
+        <location filename="../src/mainwindow.cpp" line="1553"/>
         <source>This field is conected as master of:</source>
         <translation>Este campo está conectado como maestro de:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="606"/>
+        <location filename="../src/mainwindow.cpp" line="607"/>
         <source>Print Scene Graph</source>
         <translation>Imprimir Grafo de escena</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="616"/>
+        <location filename="../src/mainwindow.cpp" line="617"/>
         <source>Node Class</source>
         <translation>Clase</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="616"/>
+        <location filename="../src/mainwindow.cpp" line="617"/>
         <source>Node Name</source>
         <translation>Nombre</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="914"/>
+        <location filename="../ui/mainwindow.ui" line="922"/>
         <source>&amp;Print Scene Graph</source>
         <translation>Im&amp;primir Grafo de escena</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="917"/>
+        <location filename="../ui/mainwindow.ui" line="925"/>
         <source>Ctrl+P</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="925"/>
+        <location filename="../ui/mainwindow.ui" line="933"/>
         <source>SoReorganizeAction</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="944"/>
+        <location filename="../ui/mainwindow.ui" line="952"/>
         <source>Export ASE</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="183"/>
+        <location filename="../src/mainwindow.cpp" line="184"/>
         <source>Ctrl+M</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="584"/>
+        <location filename="../src/mainwindow.cpp" line="337"/>
+        <source>: Unknown file format</source>
+        <translation>: Formato de fichero desconocido</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="585"/>
         <source>ASE Files</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="616"/>
+        <location filename="../src/mainwindow.cpp" line="617"/>
         <source>RefCount</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4215"/>
+        <location filename="../src/mainwindow.cpp" line="4231"/>
         <source>OBJ/SMF </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4277"/>
+        <location filename="../src/mainwindow.cpp" line="4293"/>
         <source>OFF </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4319"/>
+        <location filename="../src/mainwindow.cpp" line="4335"/>
         <source>STL </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4354"/>
+        <location filename="../src/mainwindow.cpp" line="4371"/>
         <source>XYZ </source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="933"/>
+        <location filename="../ui/mainwindow.ui" line="941"/>
         <source>Reload Scene</source>
         <translation>Recargar Escena</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="936"/>
+        <location filename="../ui/mainwindow.ui" line="944"/>
         <source>Ctrl+R</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="952"/>
+        <location filename="../ui/mainwindow.ui" line="960"/>
         <source>Hello Cone demo</source>
         <translation>Demo Hola Cono</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1266"/>
+        <location filename="../src/mainwindow.cpp" line="1267"/>
         <source>with usefull contributions from</source>
         <translation>con útiles contribuciones de</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3025"/>
+        <location filename="../src/mainwindow.cpp" line="3026"/>
         <source>Error: only supports files with NDims = 3</source>
         <translation>Error: Solo se aceptan ficheros con NDims = 3</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3054"/>
+        <location filename="../src/mainwindow.cpp" line="3055"/>
         <source>Reading data from</source>
         <translation>Leyendo datos de</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3073"/>
+        <location filename="../src/mainwindow.cpp" line="3074"/>
         <source>: Error while reading file.</source>
         <translation>: Error al leer el fichero.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3090"/>
+        <location filename="../src/mainwindow.cpp" line="3091"/>
         <source>: Invalid .mha file</source>
         <translation>: Fichero .mha no válido</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="3082"/>
+        <location filename="../src/mainwindow.cpp" line="3083"/>
         <source>Warning: </source>
         <translation>Aviso:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="4540"/>
+        <location filename="../src/mainwindow.cpp" line="4408"/>
+        <source>PCD Files</source>
+        <translation>Ficheros PCD</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="4622"/>
         <source>Error while computing convex hull</source>
         <translation>Error durante el cálculo del cierre convexo</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="960"/>
+        <location filename="../ui/mainwindow.ui" line="968"/>
         <source>Compute convex hull</source>
         <translation>Calcular cierre convexo</translation>
     </message>
@@ -1102,20 +1118,20 @@ Are you sure you want to embed all textures?</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/cds_util.cpp" line="2107"/>
-        <location filename="../src/cds_util.cpp" line="2119"/>
-        <location filename="../src/cds_util.cpp" line="2130"/>
+        <location filename="../src/cds_util.cpp" line="2108"/>
+        <location filename="../src/cds_util.cpp" line="2120"/>
+        <location filename="../src/cds_util.cpp" line="2131"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../src/cds_util.cpp" line="2107"/>
-        <location filename="../src/cds_util.cpp" line="2119"/>
+        <location filename="../src/cds_util.cpp" line="2108"/>
+        <location filename="../src/cds_util.cpp" line="2120"/>
         <source>Can&apos;t export this to .ase file format</source>
         <translation>No puedo exportar a formato .ase</translation>
     </message>
     <message>
-        <location filename="../src/cds_util.cpp" line="2131"/>
+        <location filename="../src/cds_util.cpp" line="2132"/>
         <source>Can&apos;t create output file</source>
         <translation>No puedo crear fichero de salida</translation>
     </message>
@@ -1138,7 +1154,7 @@ Are you sure you want to embed all textures?</source>
 <context>
     <name>QProgressDialog</name>
     <message>
-        <location filename="../src/cds_util.cpp" line="1934"/>
+        <location filename="../src/cds_util.cpp" line="1935"/>
         <source>Exporting...</source>
         <translation>Exportando...</translation>
     </message>

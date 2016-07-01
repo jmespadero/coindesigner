@@ -717,6 +717,14 @@
     <string>Export to XYZ</string>
    </property>
   </action>
+  <action name="Export_to_PCD" >
+   <property name="icon" >
+    <iconset resource="../images/icons.qrc" >:/icons/gui/filesaveas.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Export to PCD</string>
+   </property>
+  </action>
   <action name="Center_on_Origin" >
    <property name="icon" >
     <iconset resource="../images/icons.qrc" >:/icons/gui/package_utilities.png</iconset>

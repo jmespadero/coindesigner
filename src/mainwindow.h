@@ -208,6 +208,7 @@ public slots:
 	void on_Export_to_OFF_activated();
 	void on_Export_to_STL_activated();
 	void on_Export_to_XYZ_activated();
+    void on_Export_to_PCD_activated();
 
 	///Callback to simplify a shape with QSlim
 	void on_actionQSlim_activated();
