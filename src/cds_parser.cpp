@@ -87,7 +87,7 @@
    ficheros en los siguientes formatos:
      -Geomview: soporta ficheros OFF, COFF, NOFF, NCOFF, STOFF
      -SMF, OBJ
-     -XYZ : Nubes de puntos (3 coordenadas por línea de fichero)
+     -XYZ : Nubes de puntos (3 coordenadas por linea de fichero)
      -SPH : Arboles de esferas
 */
 
