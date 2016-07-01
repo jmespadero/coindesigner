@@ -25,6 +25,7 @@
 #include <mainwindow.h>
 #include <settingsDialog.h>
 #include <QLibraryInfo>
+#include <locale.h>
 
 ///Objeto para almacenar la configuración de coindesigner
 QSettings *settings;
@@ -54,7 +55,10 @@ int main(int argc, char *argv[])
 
 	//Leemos el lenguaje del interfaz de los settings
 	QString lang(settings->value("lang").toString());
-	qDebug("Locale=%s",qPrintable(lang));
+	qDebug("Locale=%s", qPrintable(lang));
+    
+    //Force "C" locale for read/print numbers, so float will always use "."
+    setlocale(LC_NUMERIC, "C");
 
 	//Traduccion de cadenas de QT
 	QTranslator qtTranslator;
