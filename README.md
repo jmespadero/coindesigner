@@ -81,7 +81,7 @@ Usually you can get this packages with the command:
 Optionally, you can use SIM Voleon to visualice volumetric data. Visit 
    https://bitbucket.org/Coin3D/simvoleon to read how to download and install these libraries.
 
-### Building coindesigner and cdsview
+### Building coindesigner and cdsview (linux)
 
 Clone the source from this reposity, and run make with the coindesigner.make file
 
@@ -89,6 +89,16 @@ Clone the source from this reposity, and run make with the coindesigner.make fil
    git clone https://github.com/jmespadero/coindesigner.git
    cd coindesigner
    make -f coindesigner.make 
+```
+
+Alternatively, you can use cmake to build the program:
+
+```
+   git clone https://github.com/jmespadero/coindesigner.git
+   mkdir coindesigner-build
+   cd coindesigner-build
+   cmake ../coindesigner
+   make   
 ```
 
 To use the translation files, you must run coindesigner in the 
