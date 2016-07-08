@@ -94,11 +94,11 @@ Clone the source from this reposity, and run make with the coindesigner.make fil
 Alternatively, you can use cmake to build the program:
 
 ```
-   git clone https://github.com/jmespadero/coindesigner.git
-   mkdir coindesigner-build
-   cd coindesigner-build
-   cmake ../coindesigner
-   make   
+git clone https://github.com/jmespadero/coindesigner.git
+mkdir coindesigner-build
+cd coindesigner-build
+cmake ../coindesigner
+make   
 ```
 
 To use the translation files, you must run coindesigner in the 
