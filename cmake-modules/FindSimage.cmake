@@ -1,3 +1,6 @@
+#This file is adapted from CMakeLists.txt written by 
+#Leopold Palomo-Avellaneda for his fork at iocroblab/coindesigner
+
 # - Find a Simage installation
 # The current version of FindSimage requires pkg-config to find simage.
 # If the variable Simage_DIR is set, ${Simage_DIR}/lib/pkgconfig will

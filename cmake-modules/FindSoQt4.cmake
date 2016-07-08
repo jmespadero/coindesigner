@@ -1,3 +1,6 @@
+#This file is adapted from CMakeLists.txt written by 
+#Leopold Palomo-Avellaneda for his fork at iocroblab/coindesigner
+
 # Try to find SoQt library, against Qt4
 # Once done this will define
 #

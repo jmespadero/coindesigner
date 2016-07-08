@@ -1,3 +1,6 @@
+#This file is adapted from CMakeLists.txt written by 
+#Leopold Palomo-Avellaneda for his fork at iocroblab/coindesigner
+
 # - Find a Dime installation
 # The current version of FindDime requires pkg-config to find simage.
 # If the variable Dime_DIR is set, ${Dime_DIR}/lib/pkgconfig will

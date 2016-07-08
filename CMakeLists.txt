@@ -1,6 +1,10 @@
+#This file is adapted from CMakeLists.txt written by 
+#Leopold Palomo-Avellaneda for his fork at iocroblab/coindesigner
+
 cmake_minimum_required( VERSION 2.8 )
 
 project(coindesigner)
+
 
 ########### Modules path ###############
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
