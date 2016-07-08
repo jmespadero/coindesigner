@@ -26,8 +26,11 @@
 
 //Definimos el prefijo por defecto de la aplicacion
 #ifndef PREFIX
-//#error Debe definir un valor para PREFIX
-#define PREFIX
+  #ifdef CMAKE_INSTALL_PREFIX
+    #define PREFIX CMAKE_INSTALL_PREFIX
+  #else
+    #define PREFIX
+  #endif
 #endif
 
 //Definimos el directorio de la aplicacion

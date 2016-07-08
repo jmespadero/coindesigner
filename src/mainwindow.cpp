@@ -3905,7 +3905,7 @@ void MainWindow::on_actionPromote_Children_activated()
 
 
 ///Embed external texture image files into the node
-void MainWindow::on_actionEmbedTexture_activated(SoNode *node)
+void MainWindow::on_actionEmbedTexture_activated(SoNode *node=NULL)
 {
   //Miramos si nos han pasado algun nodo o debemos usar el item actual 
 	if (node == NULL)
