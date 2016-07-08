@@ -145,6 +145,9 @@ external program. It's not easy to find the standalone qhulllib code
 framework which has Copyright (c) 2004 Open Dynamics Framework Group.
 Please, read README_qhulllib.txt and README_qhull.txt for more details.
 
+The CMakeLists.txt file necessary to build the app using cmake was written
+by Leopold Palomo-Avellaneda for his own fork of coindesigner.
+
 Last but not least, many fragment of coindesigner are based on examples found in
 the Coin3D and Qt documentation. We would like to acknowledge that work and 
 the help received from Lars J. Aas, Morten Eriksen and Peder Blekken from 
