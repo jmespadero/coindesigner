@@ -7,3 +7,5 @@ cdsview.pro.user
 *.diff
 *.patch
 
+Makefile
+build
