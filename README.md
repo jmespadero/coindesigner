@@ -69,10 +69,12 @@ You will need this libraries installed and working:
  * Qt version 4.3.2 or newer.
  * Simage, Coin3D and SoQt. 
  * Dime, if you want support for DXF file format
-
+ * A standar C++ compiler and toolchain
+ 
 Usually you can get this packages with the command:
 
-```  
+```
+    apt-get install g++ bison flex make 
     apt-get install libqt4-dev libsimage-dev libcoin80-dev libdime-dev libsoqt4-dev 
 ```
 
