@@ -74,8 +74,8 @@ You will need this libraries installed and working:
 Usually you can get this packages with the command:
 
 ```
-    apt-get install g++ bison flex make 
-    apt-get install libqt4-dev libsimage-dev libcoin80-dev libdime-dev libsoqt4-dev 
+apt-get install g++ bison flex make 
+apt-get install libqt4-dev libsimage-dev libcoin80-dev libdime-dev libsoqt4-dev 
 ```
 
 Optionally, you can use SIM Voleon to visualice volumetric data. Visit 
@@ -86,9 +86,9 @@ Optionally, you can use SIM Voleon to visualice volumetric data. Visit
 Clone the source from this reposity, and run make with the coindesigner.make file
 
 ```
-   git clone https://github.com/jmespadero/coindesigner.git
-   cd coindesigner
-   make -f coindesigner.make 
+git clone https://github.com/jmespadero/coindesigner.git
+cd coindesigner
+make -f coindesigner.make 
 ```
 
 Alternatively, you can use cmake to build the program:
