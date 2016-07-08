@@ -109,14 +109,23 @@ ensure that the LANG enviroment variable is adecuate to your language.
 
 #### QSlim
 
-The mesh reduction tool is based in QSLIM, an algorithm designed and 
+The mesh reduction tool is based in QSlim, an algorithm designed and 
 coded by Michael Garland. To use qslim, you must download it from the web
-http://mgarland.org/software/qslim21.html and put the 
-executable of QSLIM in the same directory of coindesigner (or elsewhere
-in the path). You will see if QSLIM is available in the "help->about" menu.
+<http://mgarland.org/software/qslim21.html> and put the 
+executable of QSlim in the same directory of coindesigner (or elsewhere
+in the path). You will see if QSlim is available in the "help->about" menu.
 
 Note: If you don't want to compile qslim, can download binaries from here:
 http://mgarland.org/software/qslim20.html
+
+#### Tetgen
+
+TetGen is a program to generate tetrahedral meshes of any 3D polyhedral domains.
+TetGen generates exact constrained Delaunay tetrahedralizations, boundary conforming 
+Delaunay meshes, and Voronoi partitions. To use tetgen, you must download it from 
+<http://wias-berlin.de/software/tetgen> and put the executable of tetgen in the 
+same directory of coindesigner (or elsewhere in the path). You will see if tetgen 
+is available in the "help->about" menu.
 
 
 ## ACKNOWLEDGES
