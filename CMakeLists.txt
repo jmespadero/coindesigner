@@ -145,7 +145,7 @@ add_definitions(-DCDS_VERSION=${CDS_VERSION})
 include_directories ( ${CMAKE_SOURCE_DIR}/src ${CDS_INCLUDES}
                       ${CMAKE_BINARY_DIR})
 
-configure_file(${CMAKE_SOURCE_DIR}/src/config.h.cmake ${CMAKE_BINARY_DIR}/config.h)
+# configure_file(${CMAKE_SOURCE_DIR}/src/config.h.cmake ${CMAKE_BINARY_DIR}/config.h)
 
 set ( CDS_HDRS src/cds_util.h
                src/cds_globals.h
@@ -236,4 +236,4 @@ target_link_libraries ( cdsview ${SOQT_LIBRARY} ${COIN_LIBRARY} )
 
 install(TARGETS coindesigner cdsview DESTINATION bin)
 install(DIRECTORY demos test DESTINATION share/coindesigner)
-install(FILES ${TRS} DESTINATION share/coindesigner/i18n)
+install(FILES ${TRS} DESTINATION share/coindesigner/translations)
