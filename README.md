@@ -1,6 +1,8 @@
 Coindesigner
 ============
 
+[![Join the chat at https://gitter.im/coindesigner/Lobby](https://badges.gitter.im/coindesigner/Lobby.svg)](https://gitter.im/coindesigner/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Coindesigner is a RAD (rapid application development) system to build 3D applications 
 using Coin3D openInventor. It allows to write simple 3D scenarios just using 
 drag&drop, so users require no programming skills to use it. 
